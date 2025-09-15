@@ -1,202 +1,155 @@
-/* Estilos generales */
+/* -------------------------
+   Estilos generales
+------------------------- */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   background: #f8f8f8;
-  color: #333;
+  color: #222;
+  line-height: 1.6;
 }
 
-/* Encabezado */
+/* -------------------------
+   Encabezado
+------------------------- */
 header {
-  background: black;
-  color: white;
+  background: #000;
+  color: #fff;
   padding: 20px;
   text-align: center;
+  border-bottom: 2px solid #fff; /* línea blanca elegante */
+}
+
+/* -------------------------
+   Menú de navegación
+------------------------- */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #111;
+  padding: 15px 0;
 }
 
 nav a {
-  color: white;
-  margin: 0 15px;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background: transparent;
+  transition: all 0.3s ease;
 }
 
-/* Sección principal (hero) */
+nav a:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-3px); /* levanta el botón */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* -------------------------
+   Sección principal (hero)
+------------------------- */
 .hero {
-  background: #222;
+  background: linear-gradient(to right, #000, #222);
   display: flex;
-  flex-direction: column;   /* elementos en columna */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 20px;
+  padding: 60px 20px;
   color: white;
   text-align: center;
 }
 
 .subtitulo {
-  font-size: 1.8em;         /* más pequeño que antes */
-  margin-bottom: 25px;      /* espacio entre texto e imágenes */
-  color: #f8f8f8;
-  font-weight: normal;
-  text-shadow: 1px 1px 4px black;
+  font-size: 2em;
+  margin-bottom: 25px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
+/* Galería de modelos */
 .galeria-modelos {
   display: flex;
   justify-content: center;
-  gap: 25px;               /* espacio entre imágenes */
-  flex-wrap: wrap;         /* se acomodan en móviles */
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
 .galeria-modelos img {
-  width: 250px;            /* imágenes más grandes */
+  width: 220px;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease;
-}
-
-.galeria-modelos img:hover {
-  transform: scale(1.07);  /* efecto zoom al pasar el mouse */
-}
-
-/* Secciones */
-section {
-  padding: 40px;
-  text-align: center;
-}
-
-#coleccion {
-  background: #fff;
-}
-
-#nosotros {
-  background: #f0f0f0;
-}
-
-#contacto {
-  background: #fff;
-}
-
-/* Pie de página */
-footer {
-  background: #111;
-  color: #aaa;
-  text-align: center;
-  padding: 20px;
-}
-
-/* Diseño de la sección principal */
-#inicio {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 10px;
-  background: #1c1c1c; /* fondo oscuro elegante */
-  color: white;
-}
-
-.contenido-principal {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  width: 100%;
-  gap: 20px; /* espacio entre texto e imagen */
-}
-
-.texto {
-  flex: 1;
-}
-
-.texto h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
-.texto p {
-  font-size: 1.2em;
-  line-height: 1.5;
-}
-
-/* Imagen principal (limpio y corregido) */
-.imagen-principal {
-  max-width: 70px;   /* ajusta el tamaño de la imagen */
-  height: auto;       /* mantiene proporción */
-  margin-top: 0;      /* más pegada al título */
-  margin-left: 20px;  /* espacio lateral */
-  border-radius: 12px;
+  border-radius: 15px;
+  border: 2px solid #fff;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-}
-.galeria-modelos {
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* espacio entre imágenes */
-  margin-top: 20px;
-  flex-wrap: wrap; /* se acomodan en móviles */
-}
-
-.galeria-modelos img {
-  width: 200px;       /* tamaño de cada imagen */
-  height: auto;       /* mantiene proporción */
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .galeria-modelos img:hover {
-  transform: scale(1.05); /* efecto zoom al pasar el mouse */
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
+
+/* -------------------------
+   Secciones generales
+------------------------- */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#coleccion,
+#nosotros,
 #contacto {
   background: #fff;
-  text-align: left;          /* alinea texto a la izquierda */
+}
+
+.caja {
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  padding: 30px 40px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* -------------------------
+   Contacto
+------------------------- */
+#contacto {
   display: flex;
-  justify-content: flex-start; 
-  align-items: flex-end;     /* coloca el contenido al fondo */
-  min-height: 200px;         /* altura mínima para que se note el fondo */
+  justify-content: flex-start;
+  align-items: flex-end;
+  min-height: 200px;
   padding: 40px;
 }
+
 #contacto div {
   max-width: 400px;
-}
-.contenedor {
-  max-width: 1000px;    /* ancho máximo del contenido */
-  margin: 0 auto;       /* lo centra horizontalmente */
-  text-align: center;   /* centra el texto dentro */
-}
-.caja {
-  background: #fff;                /* fondo blanco de la caja */
-  border-radius: 12px;             /* bordes redondeados */
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* sombra suave */
-  padding: 30px 40px;              /* espacio interno */
-  margin: 20px auto;               /* espacio exterior */
-  max-width: 800px;                /* ancho máximo */
-  text-align: center;              /* centra el contenido */
-}
-nav {
-  display: flex;
-  justify-content: center; /* centra horizontalmente */
-  gap: 20px;               /* espacio entre los links */
-  background: #111;        /* color de fondo de la franja */
-  padding: 15px 0;
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
 }
 
-nav a {
-  color: #fff;                /* texto blanco */
-  text-decoration: none;      /* sin subrayado */
-  font-size: 18px;
-  font-weight: bold;
-  padding: 8px 16px;          /* espacio interno */
-  border: 2px solid #fff;     /* borde blanco */
-  border-radius: 8px;         /* esquinas redondeadas */
-  background: #000;           /* fondo negro */
-  transition: all 0.3s ease;  /* animación suave */
-}
-
-nav a:hover {
-  background: #fff;   /* fondo blanco al pasar el mouse */
-  color: #000;        /* texto negro */
-  border-color: #000; /* cambia borde a negro */
+/* -------------------------
+   Pie de página
+------------------------- */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+  border-top: 2px solid #fff;
 }
 
