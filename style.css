@@ -160,5 +160,9 @@ footer {
 #contacto div {
   max-width: 400px;
 }
-
+.contenedor {
+  max-width: 1000px;    /* ancho máximo del contenido */
+  margin: 0 auto;       /* lo centra horizontalmente */
+  text-align: center;   /* centra el texto dentro */
+}
 
