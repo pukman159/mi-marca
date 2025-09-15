@@ -98,7 +98,7 @@ footer {
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 .imagen-principal {
-  width: 100px;   /* ancho fijo */
+  width: 80px;   /* ancho fijo */
   height: auto;   /* mantiene proporción */
   display: block;
   margin: 20px auto; /* centra la imagen */
