@@ -97,7 +97,7 @@ footer {
 
 /* Imagen principal (limpio y corregido) */
 .imagen-principal {
-  max-width: 80px;   /* ajusta el tamaño de la imagen */
+  max-width: 90px;   /* ajusta el tamaño de la imagen */
   height: auto;       /* mantiene proporción */
   margin-top: 0;      /* más pegada al título */
   margin-left: 20px;  /* espacio lateral */
