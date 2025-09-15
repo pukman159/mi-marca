@@ -148,6 +148,17 @@ footer {
 .galeria-modelos img:hover {
   transform: scale(1.05); /* efecto zoom al pasar el mouse */
 }
-
+#contacto {
+  background: #fff;
+  text-align: left;          /* alinea texto a la izquierda */
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-end;     /* coloca el contenido al fondo */
+  min-height: 200px;         /* altura mínima para que se note el fondo */
+  padding: 40px;
+}
+#contacto div {
+  max-width: 400px;
+}
 
 
