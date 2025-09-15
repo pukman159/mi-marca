@@ -319,7 +319,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  flex-wrap: wrap; /* se quede al lado */
+  flex-wrap: nowrap; /* se quede al lado */
 }
 
 .contenido-principal .texto {
