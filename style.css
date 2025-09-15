@@ -150,5 +150,18 @@ footer {
   letter-spacing: 0.5px;
   border-top: 2px solid #fff;
 }
-
+/* Logo */
+.logo img {
+  height: 50px;       /* alto del logo */
+  width: auto;        /* mantiene proporción */
+  margin-right: 30px; /* espacio entre logo y menú */
+}
+header {
+  display: flex;
+  justify-content: space-between; /* logo a la izquierda, menú a la derecha */
+  align-items: center;
+  padding: 10px 40px;
+  background: #fff;  /* blanco */
+  border-bottom: 1px solid #ccc;
+}
 
