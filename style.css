@@ -26,8 +26,13 @@ nav {
   gap: 20px;
   background: #111;
   padding: 15px 0;
-  border-bottom: 2px solid #fff; /* Línea debajo de botones */
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  position: fixed;   /* 🔹 siempre fijo */
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 1000;
 }
 
 
