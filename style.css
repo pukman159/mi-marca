@@ -102,5 +102,25 @@ footer {
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
+.galeria-modelos {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* espacio entre imágenes */
+  margin-top: 20px;
+  flex-wrap: wrap; /* se acomodan en móviles */
+}
+
+.galeria-modelos img {
+  width: 200px;       /* tamaño de cada imagen */
+  height: auto;       /* mantiene proporción */
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.galeria-modelos img:hover {
+  transform: scale(1.05); /* efecto zoom al pasar el mouse */
+}
+
 
 
