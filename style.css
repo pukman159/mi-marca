@@ -174,4 +174,29 @@ footer {
   max-width: 800px;                /* ancho máximo */
   text-align: center;              /* centra el contenido */
 }
+nav {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  gap: 20px;               /* espacio entre los links */
+  background: #111;        /* color de fondo de la franja */
+  padding: 15px 0;
+}
+
+nav a {
+  color: #fff;                /* texto blanco */
+  text-decoration: none;      /* sin subrayado */
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 16px;          /* espacio interno */
+  border: 2px solid #fff;     /* borde blanco */
+  border-radius: 8px;         /* esquinas redondeadas */
+  background: #000;           /* fondo negro */
+  transition: all 0.3s ease;  /* animación suave */
+}
+
+nav a:hover {
+  background: #fff;   /* fondo blanco al pasar el mouse */
+  color: #000;        /* texto negro */
+  border-color: #000; /* cambia borde a negro */
+}
 
