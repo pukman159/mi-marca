@@ -170,7 +170,7 @@ footer {
 }
 
 .imagen-principal {
-  width: 40px;   /* tamaño fijo para el logo */
+  width: 65px;   /* tamaño fijo para el logo */
   border-radius: 50%;
   border: 3px solid #fff;
 }
