@@ -25,11 +25,13 @@ header {
 nav {
   display: flex;
   justify-content: center;
+  align-items: center;   /* 🔹 Asegura que se mantenga centrado en PC */
   gap: 20px;
   background: #111;
   padding: 15px 0;
-  border-bottom: 2px solid #fff; /* 🔹 Línea debajo de los botones */
-  width: 80%;
+  border-bottom: 2px solid #fff; /* 🔹 Línea blanca solo debajo de los botones */
+  width: 100%;                   /* 🔹 Ocupar ancho completo */
+  box-sizing: border-box;
 }
 
 nav a {
