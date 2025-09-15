@@ -161,36 +161,12 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  flex-wrap: nowrap; /* se quede al lado */
 }
 
 .contenido-principal .texto {
   max-width: 400px;
   text-align: left;
-}
-
-.imagen-principal {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #fff;
-}
-
-/* En móviles: reducir tamaños para que quepan al lado */
-@media (max-width: 600px) {
-  .contenido-principal {
-    gap: 15px;
-  }
-
-  .contenido-principal .texto {
-    font-size: 0.9em;
-    max-width: 200px;
-  }
-
-  .imagen-principal {
-    width: 100px;
-    height: 100px;
-  }
 }
 
 
