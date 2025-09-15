@@ -1,0 +1,60 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  color: #333;
+}
+
+/* Encabezado */
+header {
+  background: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sección principal (hero) */
+.hero {
+  background: #222;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+  font-size: 2.5em;
+}
+
+/* Secciones */
+section {
+  padding: 40px;
+  text-align: center;
+}
+
+#coleccion {
+  background: #fff;
+}
+
+#nosotros {
+  background: #f0f0f0;
+}
+
+#contacto {
+  background: #fff;
+}
+
+/* Pie de página */
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+}
