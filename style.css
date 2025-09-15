@@ -30,7 +30,6 @@ nav {
   background: #111;
   padding: 15px 0;
   border-bottom: 2px solid #fff; /* 🔹 Línea blanca solo debajo de los botones */
-  width: 100%;                   /* 🔹 Ocupar ancho completo */
   box-sizing: border-box;
 }
 
