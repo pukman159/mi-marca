@@ -24,13 +24,15 @@ nav a {
 /* Sección principal (hero) */
 .hero {
   background: #222;
-  height: 60vh;
+  height: auto;               /* que crezca según el contenido */
   display: flex;
+  flex-direction: column;     /* ← coloca los elementos uno debajo del otro */
   justify-content: center;
   align-items: center;
   color: white;
   text-shadow: 2px 2px 5px black;
   font-size: 2.5em;
+  padding: 40px 20px;         /* agrega un poco de espacio interno */
 }
 
 /* Secciones */
