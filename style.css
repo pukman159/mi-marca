@@ -165,4 +165,13 @@ footer {
   margin: 0 auto;       /* lo centra horizontalmente */
   text-align: center;   /* centra el texto dentro */
 }
+.caja {
+  background: #fff;                /* fondo blanco de la caja */
+  border-radius: 12px;             /* bordes redondeados */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* sombra suave */
+  padding: 30px 40px;              /* espacio interno */
+  margin: 20px auto;               /* espacio exterior */
+  max-width: 800px;                /* ancho máximo */
+  text-align: center;              /* centra el contenido */
+}
 
