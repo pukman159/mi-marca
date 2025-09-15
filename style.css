@@ -168,7 +168,13 @@ footer {
   max-width: 400px;
   text-align: left;
 }
-
+.imagen-principal {
+  width: 150px;
+  height: 150px;       /* Fuerza a que sea cuadrado */
+  object-fit: cover;   /* Recorta para llenar el espacio */
+  border-radius: 50%;  /* Ahora sí redondo perfecto */
+  border: 3px solid #fff;
+}
 
 
 
