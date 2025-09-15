@@ -82,7 +82,7 @@ nav a:hover {
 }
 
 .galeria-modelos img {
-  width: 180px;
+  width: 80px;
   height: auto;
   border-radius: 15px;
   border: 2px solid #fff;
@@ -152,15 +152,16 @@ footer {
   letter-spacing: 0.5px;
   border-top: 2px solid #fff;
 }
+
 /* -------------------------
-   Encabezado con logo
+   Logo junto al texto (inicio)
 ------------------------- */
 .contenido-principal {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
-  flex-wrap: wrap; /* Para que en móviles baje el logo */
+  flex-wrap: wrap; /* Para que en móviles se acomode */
 }
 
 .contenido-principal .texto {
@@ -169,7 +170,7 @@ footer {
 }
 
 .imagen-principal {
-  width: 120px;
+  width: 150px;   /* tamaño fijo para el logo */
   border-radius: 50%;
   border: 3px solid #fff;
 }
