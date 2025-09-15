@@ -29,6 +29,7 @@ nav {
   gap: 20px;
   background: #111;
   padding: 15px 0;
+border-top: 2px solid #fff;
 }
 
 nav a {
