@@ -21,31 +21,33 @@ header {
 }
 
 /* -------------------------
-   Menú de navegación (sticky estilo H&M)
+   Menú de navegación
 ------------------------- */
 nav {
-  position: sticky;       /* se queda fijo */
-  top: 0;                 /* pegado arriba */
-  z-index: 1000;          /* queda encima del resto */
   display: flex;
   justify-content: center;
-  gap: 50px;
-  background: #fff;
-  border-bottom: 1px solid #ccc;
+  gap: 20px;
+  background: #111;
   padding: 15px 0;
 }
 
 nav a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
-  padding: 5px 10px;
-  transition: color 0.3s ease;
+  padding: 8px 18px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background: transparent;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
-  color: #c00; /* rojo al pasar el mouse */
+  background: #fff;
+  color: #000;
+  transform: translateY(-3px); /* levanta el botón */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 /* -------------------------
@@ -150,18 +152,5 @@ footer {
   letter-spacing: 0.5px;
   border-top: 2px solid #fff;
 }
-/* Logo */
-.logo img {
-  height: 50px;       /* alto del logo */
-  width: auto;        /* mantiene proporción */
-  margin-right: 30px; /* espacio entre logo y menú */
-}
-header {
-  display: flex;
-  justify-content: space-between; /* logo a la izquierda, menú a la derecha */
-  align-items: center;
-  padding: 10px 40px;
-  background: #fff;  /* blanco */
-  border-bottom: 1px solid #ccc;
-}
+
 
