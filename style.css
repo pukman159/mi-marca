@@ -28,13 +28,8 @@ nav {
   padding: 15px 0;
   border-top: 2px solid #fff;
   border-bottom: 2px solid #fff;
-  position: fixed;   /* 🔹 siempre fijo */
-  top: 0;
-  left: 0;
   width: 100%;
-  z-index: 1000;
 }
-
 
 nav a {
   color: #fff;
