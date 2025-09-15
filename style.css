@@ -356,6 +356,8 @@ nav {
   background: #111;
   padding: 15px 0;
   flex-wrap: wrap;  /* permite que los botones bajen si no caben */
+border-top: 2px solid #fff;
+
 }
 
 nav a {
