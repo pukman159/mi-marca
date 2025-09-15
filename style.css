@@ -19,19 +19,17 @@ header {
   text-align: center;
 }
 
-/* -------------------------
-   Menú de navegación
-------------------------- */
 nav {
   display: flex;
   justify-content: center;
-  align-items: center;   /* 🔹 Asegura que se mantenga centrado en PC */
+  align-items: center;
   gap: 20px;
   background: #111;
   padding: 15px 0;
-  border-bottom: 2px solid #fff; /* 🔹 Línea blanca solo debajo de los botones */
-  box-sizing: border-box;
+  border-bottom: 2px solid #fff; /* Línea debajo de botones */
+  width: 100%;
 }
+
 
 nav a {
   color: #fff;
