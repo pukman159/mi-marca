@@ -152,6 +152,27 @@ footer {
   letter-spacing: 0.5px;
   border-top: 2px solid #fff;
 }
+/* -------------------------
+   Encabezado con logo
+------------------------- */
+.contenido-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Para que en móviles baje el logo */
+}
+
+.contenido-principal .texto {
+  max-width: 400px;
+  text-align: left;
+}
+
+.imagen-principal {
+  width: 120px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
 
 
 
