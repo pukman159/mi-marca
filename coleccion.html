@@ -8,14 +8,18 @@
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="coleccion.html">Colección</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
+    nav ul {
+  list-style: none;         /* quita los puntos de la lista */
+  display: flex;            /* pone los elementos en línea */
+  justify-content: center;  /* centra el menú */
+  gap: 20px;                /* espacio entre botones */
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;    /* asegura que no se apilen */
+}
   </header>
   <main>
     <h1>Nuestra Colección</h1>
