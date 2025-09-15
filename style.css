@@ -319,19 +319,34 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  flex-wrap: nowrap; /* se quede al lado */
+  flex-wrap: nowrap;   /* Siempre al lado */
+}
+
+.imagen-principal {
+  width: 150px;        /* Tamaño por defecto (PC) */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  flex-shrink: 0;      /* El logo nunca se deforma */
 }
 
 .contenido-principal .texto {
-  max-width: 400px;
+  flex: 1;             /* El texto ocupa el espacio restante */
+  min-width: 0;        /* Permite que se encoja en móviles */
   text-align: left;
 }
-.imagen-principal {
-  width: 150px;
-  height: 150px;       /* Fuerza a que sea cuadrado */
-  object-fit: cover;   /* Recorta para llenar el espacio */
-  border-radius: 50%;  /* Ahora sí redondo perfecto */
-  border: 3px solid #fff;
+
+/* 🔹 Ajuste automático para pantallas pequeñas */
+@media (max-width: 600px) {
+  .imagen-principal {
+    width: 90px;       /* Más chico en móvil */
+    height: 90px;
+  }
+  
+  .contenido-principal {
+    gap: 15px;         /* Menos espacio entre logo y texto */
+  }
 }
 
 
