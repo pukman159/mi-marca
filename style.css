@@ -348,6 +348,43 @@ footer {
     gap: 15px;         /* Menos espacio entre logo y texto */
   }
 }
+/* --- Menú de navegación --- */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #111;
+  padding: 15px 0;
+  flex-wrap: wrap;  /* permite que los botones bajen si no caben */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background: transparent;
+  transition: all 0.3s ease;
+  white-space: nowrap; /* evita que el texto se corte */
+}
+
+/* --- Ajustes para pantallas pequeñas --- */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;   /* en columna en móvil */
+    align-items: center;
+    gap: 10px;
+  }
+
+  nav a {
+    width: 80%;              /* botones más anchos y centrados */
+    text-align: center;
+    font-size: 16px;         /* texto un poquito más chico */
+  }
+}
 
 
 
