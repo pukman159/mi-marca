@@ -58,3 +58,12 @@ footer {
   text-align: center;
   padding: 20px;
 }
+/* Foto del modelo en la sección principal */
+.foto-modelo {
+    display: block;
+    margin: 20px auto;   /* centra la imagen */
+    max-width: 300px;    /* limita el tamaño */
+    border-radius: 12px; /* esquinas redondeadas */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* sombra elegante */
+}
+
