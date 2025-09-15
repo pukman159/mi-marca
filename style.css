@@ -24,15 +24,40 @@ nav a {
 /* Sección principal (hero) */
 .hero {
   background: #222;
-  height: auto;               /* que crezca según el contenido */
   display: flex;
-  flex-direction: column;     /* ← coloca los elementos uno debajo del otro */
+  flex-direction: column;   /* elementos en columna */
   justify-content: center;
   align-items: center;
+  padding: 50px 20px;
   color: white;
-  text-shadow: 2px 2px 5px black;
-  font-size: 2.5em;
-  padding: 40px 20px;         /* agrega un poco de espacio interno */
+  text-align: center;
+}
+
+.subtitulo {
+  font-size: 1.8em;         /* más pequeño que antes */
+  margin-bottom: 25px;      /* espacio entre texto e imágenes */
+  color: #f8f8f8;
+  font-weight: normal;
+  text-shadow: 1px 1px 4px black;
+}
+
+.galeria-modelos {
+  display: flex;
+  justify-content: center;
+  gap: 25px;               /* espacio entre imágenes */
+  flex-wrap: wrap;         /* se acomodan en móviles */
+}
+
+.galeria-modelos img {
+  width: 250px;            /* imágenes más grandes */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.galeria-modelos img:hover {
+  transform: scale(1.07);  /* efecto zoom al pasar el mouse */
 }
 
 /* Secciones */
