@@ -4,20 +4,22 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(180deg, #ffffff, #f5f5f5, #000000);
-  color: #111; 
+  background: #f8f8f8;
+  color: #222;
   line-height: 1.6;
 }
+
 /* -------------------------
    Encabezado
 ------------------------- */
 header {
-  background: #000; 
+  background: #000;
   color: #fff;
   padding: 20px;
   text-align: center;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #fff; /* línea blanca elegante */
 }
+
 /* -------------------------
    Menú de navegación
 ------------------------- */
@@ -44,12 +46,8 @@ nav a {
 nav a:hover {
   background: #fff;
   color: #000;
-  transform: translateY(-3px);
+  transform: translateY(-3px); /* levanta el botón */
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-section {
-  padding: 50px 20px;
-  text-align: center;
 }
 
 /* -------------------------
@@ -113,7 +111,6 @@ section {
 
 .caja {
   background: #fff;
-  color: #000;
   border: 2px solid #000;
   border-radius: 15px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
