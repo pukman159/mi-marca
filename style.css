@@ -29,7 +29,8 @@ nav {
   gap: 20px;
   background: #111;
   padding: 15px 0;
-border-top: 2px solid #fff;
+  border-top: 2px solid #fff;   /* Línea blanca arriba */
+  width: 100vw;                 /* 🔹 Ocupa todo el ancho de la ventana */
 }
 
 nav a {
