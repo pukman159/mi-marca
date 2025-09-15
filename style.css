@@ -17,25 +17,7 @@ header {
   color: #fff;
   padding: 20px;
   text-align: center;
-  border-bottom: 2px solid #fff;
-}
-
-.contenido-principal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.contenido-principal .texto {
-  max-width: 400px;
-}
-
-.imagen-principal {
-  width: 120px;
-  border-radius: 50%;
-  border: 3px solid #fff;
+  border-bottom: 2px solid #fff; /* línea blanca elegante */
 }
 
 /* -------------------------
@@ -47,7 +29,6 @@ nav {
   gap: 20px;
   background: #111;
   padding: 15px 0;
-  flex-wrap: wrap;
 }
 
 nav a {
@@ -65,7 +46,7 @@ nav a {
 nav a:hover {
   background: #fff;
   color: #000;
-  transform: translateY(-3px);
+  transform: translateY(-3px); /* levanta el botón */
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
@@ -101,11 +82,11 @@ nav a:hover {
 }
 
 .galeria-modelos img {
-  width: 180px;
+  width: 50px;
   height: auto;
-  border-radius: 20px;
-  border: none;
-  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  border-radius: 15px;
+  border: 2px solid #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -143,8 +124,8 @@ section {
 ------------------------- */
 #contacto {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-end;
   min-height: 200px;
   padding: 40px;
 }
@@ -159,30 +140,6 @@ section {
   box-shadow: 0 6px 18px rgba(0,0,0,0.4);
 }
 
-.btn-whatsapp {
-  display: inline-block;
-  background: #25D366;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.btn-whatsapp:hover {
-  background: #1ebe57;
-}
-
-#contacto a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-#contacto a:hover {
-  color: #25D366;
-}
-
 /* -------------------------
    Pie de página
 ------------------------- */
@@ -195,35 +152,5 @@ footer {
   letter-spacing: 0.5px;
   border-top: 2px solid #fff;
 }
-
-footer nav a {
-  color: #aaa;
-  margin: 0 8px;
-  font-size: 0.9em;
-}
-
-footer nav a:hover {
-  color: #fff;
-}
-
-/* -------------------------
-   Responsive
-------------------------- */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .galeria-modelos img {
-    width: 120px;
-  }
-
-  .contenido-principal {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
 
 
