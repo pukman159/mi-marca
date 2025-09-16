@@ -206,38 +206,49 @@ footer {
 }
 
 /* -------------------------
-   Carrusel de tamaño fijo
+   Carrusel horizontal automático
 ------------------------- */
 .slider {
-  width: 220px;           /* ancho igual al de la imagen + pequeño margen */
-  height: auto;
+  width: 200px;       /* ancho igual al de la imagen */
   overflow: hidden;
-  margin: 0 auto;         /* centra en la sección */
-  position: relative;
+  margin: 0 auto;     /* centra en la sección */
 }
 
 .slides {
   display: flex;
-  flex-direction: column; /* todas las imágenes en columna */
-  animation: move 12s infinite;
+  width: calc(200px * 6 + 10px * 5); /* 6 imágenes + 5 espacios */
+  animation: slide 18s infinite;     /* duración total del ciclo */
 }
 
 .slides img {
-  width: 200px;           /* mismo tamaño que tenías antes */
+  width: 200px;                           /* tamaño original */
   height: auto;
-  border-radius: 15px;
-  border: 2px solid #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  border-radius: 15px;                    /* esquinas redondeadas */
+  border: 2px solid #fff;                 /* marco blanco */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);/* sombra */
   flex-shrink: 0;
-  margin: 0 auto 20px auto; /* centradas y espacio entre ellas */
+  margin-right: 10px;                     /* espacio entre imágenes */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes move {
-  0%, 16.66%   { transform: translateY(0); }
-  33.33%, 49.99% { transform: translateY(-220px); }
-  66.66%, 83.33% { transform: translateY(-440px); }
-  100%         { transform: translateY(0); }
+/* Animación: mueve una imagen a la vez */
+@keyframes slide {
+  0%, 16.66%        { transform: translateX(0); }
+  33.33%, 49.99%    { transform: translateX(-210px); }
+  66.66%, 83.33%    { transform: translateX(-420px); }
+  100%              { transform: translateX(0); }
+}
+
+/* Ajuste para móvil */
+@media (max-width: 600px) {
+  .slider {
+    width: 150px;    /* más pequeño en móvil */
+  }
+
+  .slides img {
+    width: 150px;
+    margin-right: 8px;
+  }
 }
 
 
