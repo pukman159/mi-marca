@@ -113,30 +113,28 @@ nav a:hover {
 
 /* Slider individual */
 .slider {
-  width: 220px;                  /* ancho del carrusel */
+  width: 220px;          /* ancho del carrusel */
   overflow: hidden;
   border-radius: 15px;
-  border: 2px solid #fff;        /* borde visible completo */
-  padding: 10px;                 /* espacio interno para las imágenes */
+  border: 2px solid #fff; 
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 /* Slides y transición */
 .slides {
   display: flex;
-  gap: 0;                     /* elimina cualquier gap que cause que se vea la siguiente imagen */
+  gap: 10px;             /* deja un pedacito visible de la siguiente imagen */
   transition: transform 0.5s ease-in-out;
 }
 
 /* Imágenes del carrusel */
 .slides img {
-  width: 100%;                /* la imagen ocupa todo el ancho disponible dentro del slider */
-  height: auto;               /* mantiene proporción */
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  border: 2px solid #fff;
   flex-shrink: 0;
-  object-fit: cover;          /* evita distorsión */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .slides img:hover {
