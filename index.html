@@ -83,15 +83,12 @@ sliders.forEach(slider => {
   const images = slides.children;
   let index = 0;
 
-  // Ancho real de cada imagen + gap
-  const style = getComputedStyle(images[0]);
-  const gap = parseInt(getComputedStyle(slides).gap) || 0;
-  const slideWidth = images[0].offsetWidth + gap;
+  const slideWidth = slider.offsetWidth;  // ancho completo del slider
 
   setInterval(() => {
     index = (index + 1) % images.length;
     slides.style.transform = `translateX(-${index * slideWidth}px)`;
-  }, 2500); // cada 2.5 segundos
+  }, 2500);
 });
   </script>
 </body>
