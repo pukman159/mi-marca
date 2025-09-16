@@ -111,7 +111,7 @@ nav a:hover {
 
 /* Slider individual */
 .slider {
-  width: 150px;  /* ancho del carrusel */
+  width: 200px;  /* ancho del carrusel */
   overflow: hidden;
   border-radius: 15px;
 }
@@ -124,7 +124,7 @@ nav a:hover {
 
 /* Imágenes con efecto hover */
 .slides img {
-  width: 200px;
+  width: 240px;
   height: auto;
   border-radius: 15px;
   border: 2px solid #fff;
