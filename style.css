@@ -207,9 +207,9 @@ footer {
 
 /* Contenedor de carrusel */
 .slider {
-  width: 420px;        /* 2 imágenes de 200px + 10px de gap */
+  width: 420px;        /* 2 imágenes de 200px + 10px gap */
   overflow: hidden;
-  margin: 20px auto;   /* separa los carruseles */
+  margin: 20px auto;   /* centra y separa cada carrusel verticalmente */
 }
 
 .slides {
@@ -227,22 +227,23 @@ footer {
   flex-shrink: 0;
 }
 
-/* Animación horizontal */
+/* Animación horizontal: se mueve una imagen a la vez */
 @keyframes slide2 {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* mueve la primera mitad de imágenes */
+  100% { transform: translateX(-50%); }
 }
 
 /* Ajuste para móviles */
 @media (max-width: 600px) {
   .slider {
-    width: 320px;   /* 2 imágenes más pequeñas en móvil */
+    width: 320px;      /* 2 imágenes visibles en móvil */
   }
 
   .slides img {
     width: 150px;
   }
 }
+
 
 
 
