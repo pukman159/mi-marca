@@ -89,7 +89,6 @@
 
         <!-- Producto 1 -->
         <div class="swiper-slide producto">
-          <!-- Mini carrusel de imágenes -->
           <div class="swiper producto-galeria">
             <div class="swiper-wrapper">
               <div class="swiper-slide"><img src="PoleraTiago1.jpeg" alt="Producto 1 - Imagen 1"></div>
@@ -166,7 +165,7 @@
 
       </div>
 
-      <!-- Solo paginación (ya sin flechas globales) -->
+      <!-- Paginación -->
       <div class="swiper-pagination"></div>
     </div>
   </main>
@@ -180,45 +179,49 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
-  // Carrusel principal (productos) -> SIN autoplay
-  const swiperProductos = new Swiper('.swiper.productos', {
-    slidesPerView: 1,
-    spaceBetween: 0, 
-    loop: false,     
-    centeredSlides: false, // ❌ lo quitamos
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      768: { 
-        slidesPerView: 2,
-        spaceBetween: 20,
-        centeredSlides: false,
-        loop: false
-      },
-      1024: { 
-        slidesPerView: 3,
-        spaceBetween: 20,
-        centeredSlides: false,
-        loop: false
-      }
-    }
-  });
-
-  // Carruseles internos (galerías de productos)
-  document.querySelectorAll('.swiper.producto-galeria').forEach((galeria) => {
-    new Swiper(galeria, {
+    // Carrusel principal (productos)
+    const swiperProductos = new Swiper('.swiper.productos', {
       slidesPerView: 1,
-      loop: true,
-      nested: true, // importante para que no interfiera con el carrusel principal
-      navigation: {
-        nextEl: galeria.querySelector('.swiper-button-next'),
-        prevEl: galeria.querySelector('.swiper-button-prev'),
+      spaceBetween: 0,
+      loop: false,
+      centeredSlides: true,
+      slidesPerGroup: 1, // 👉 avanza de 1 en 1
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: 'bullets', // 👉 un punto por producto
+      },
+      breakpoints: {
+        768: { 
+          slidesPerView: 2,
+          spaceBetween: 20,
+          centeredSlides: false,
+          loop: false,
+          slidesPerGroup: 1
+        },
+        1024: { 
+          slidesPerView: 3,
+          spaceBetween: 20,
+          centeredSlides: false,
+          loop: false,
+          slidesPerGroup: 1
+        }
       }
     });
-  });
-</script>
+
+    // Carruseles internos (galerías de productos)
+    document.querySelectorAll('.swiper.producto-galeria').forEach((galeria) => {
+      new Swiper(galeria, {
+        slidesPerView: 1,
+        loop: true,
+        nested: true, 
+        navigation: {
+          nextEl: galeria.querySelector('.swiper-button-next'),
+          prevEl: galeria.querySelector('.swiper-button-prev'),
+        }
+      });
+    });
+  </script>
 </body>
 </html>
 
