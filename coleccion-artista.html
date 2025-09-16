@@ -39,7 +39,7 @@
       border-radius: 10px;
     }
 
-    /* Flechas internas más pequeñas */
+    /* Flechas internas */
     .galeria-next, .galeria-prev {
       color: black;
       --swiper-navigation-size: 20px;
@@ -90,8 +90,8 @@
         <div class="swiper-slide producto">
           <div class="swiper producto-galeria">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="PoleraTiago1.jpeg" alt="Producto 1 - Imagen 1"></div>
-              <div class="swiper-slide"><img src="PoleraTiago2.jpeg" alt="Producto 1 - Imagen 2"></div>
+              <div class="swiper-slide"><img src="producto1a.jpg" alt="Producto 1 - Imagen 1"></div>
+              <div class="swiper-slide"><img src="producto1b.jpg" alt="Producto 1 - Imagen 2"></div>
             </div>
             <div class="galeria-next"></div>
             <div class="galeria-prev"></div>
@@ -163,10 +163,7 @@
 
       </div>
 
-      <!-- Flechas del carrusel general -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <!-- Paginación -->
+      <!-- Solo dejamos la paginación -->
       <div class="swiper-pagination"></div>
     </div>
   </main>
@@ -193,10 +190,6 @@
       el: '.swiper-pagination',
       clickable: true,
     },
-    navigation: {
-      nextEl: '.productos .swiper-button-next',
-      prevEl: '.productos .swiper-button-prev',
-    },
     breakpoints: {
       768: { slidesPerView: 2 },
       1024: { slidesPerView: 3 }
@@ -208,7 +201,7 @@
     new Swiper(galeria, {
       slidesPerView: 1,
       loop: true,
-      nested: true, // 🔑 evita que el carrusel principal se mueva
+      nested: true,
       navigation: {
         nextEl: galeria.querySelector('.galeria-next'),
         prevEl: galeria.querySelector('.galeria-prev'),
@@ -218,5 +211,6 @@
 </script>
 </body>
 </html>
+
 
 
