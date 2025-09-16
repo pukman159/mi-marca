@@ -99,7 +99,9 @@ nav a:hover {
   text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
-/* Carruseles Container */
+/* -------------------------
+   Carruseles Container
+------------------------- */
 .carruseles-container {
   display: flex;
   justify-content: center;
@@ -111,7 +113,7 @@ nav a:hover {
 
 /* Slider individual */
 .slider {
-  width: 200px;  /* ancho del carrusel */
+  width: 200px;       /* ancho del carrusel */
   overflow: hidden;
   border-radius: 15px;
 }
@@ -119,17 +121,17 @@ nav a:hover {
 /* Slides y transición */
 .slides {
   display: flex;
-  gap: 0; /* así no queda espacio que corte el borde */
+  gap: 0;             /* sin espacio extra que corte el borde */
   transition: transform 0.5s ease-in-out;
 }
 
-/* Imágenes con efecto hover */
+/* Imágenes del carrusel */
 .slides img {
-  width: 200px;
-  height: 250px; /* altura fija para que todos los carruseles sean iguales */
-  object-fit: cover;
+  width: 200px;       /* ancho fijo */
+  height: 250px;      /* altura fija para uniformidad */
+  object-fit: cover;  /* mantiene proporción sin distorsionar */
   border-radius: 15px;
-  border: 2px solid #fff;
+  border: 2px solid #fff;  /* borde completo visible */
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
   flex-shrink: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -138,40 +140,6 @@ nav a:hover {
 .slides img:hover {
   transform: scale(1.08);
   box-shadow: 0 12px 25px rgba(0,0,0,0.6);
-}
-
-/* -------------------------
-   Contacto
-------------------------- */
-#contacto {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  min-height: 200px;
-  padding: 40px;
-}
-
-#contacto div {
-  max-width: 400px;
-  background: #000;
-  color: #fff;
-  padding: 20px;
-  border: 2px solid #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-}
-
-/* -------------------------
-   Pie de página
-------------------------- */
-footer {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  letter-spacing: 0.5px;
-  border-top: 2px solid #fff;
 }
 
 /* -------------------------
@@ -190,27 +158,10 @@ footer {
 
   .slides img {
     width: 160px;       
-    height: auto;
-  }
-
-  /* Mantener logo al lado del texto en móvil */
-  .contenido-principal {
-    flex-direction: row; /* siempre al lado */
-    gap: 15px;
-    align-items: center;
-    text-align: left;
-  }
-
-  .imagen-principal {
-    width: 90px;
-    height: 90px;
-  }
-
-  .contenido-principal .texto {
-    font-size: 0.9em;
-    text-align: left;
+    height: 200px;     /* altura proporcional en móvil */
   }
 }
+
 
 
 
