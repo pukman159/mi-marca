@@ -105,7 +105,7 @@ nav a:hover {
 .carruseles-container {
   display: flex;
   justify-content: center;
-  gap: 100px;
+  gap: 100px;       /* espacio entre carruseles en PC */
   flex-wrap: nowrap;
   max-width: 100%;
   overflow-x: auto;
@@ -113,27 +113,28 @@ nav a:hover {
 
 /* Slider individual */
 .slider {
-  width: 200px;
+  width: 220px;                  /* ancho del carrusel */
   overflow: hidden;
   border-radius: 15px;
+  border: 2px solid #fff;        /* borde visible completo */
+  padding: 10px;                 /* espacio interno para las imágenes */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-/* Slides y transición con espacio extra a los lados */
+/* Slides y transición */
 .slides {
   display: flex;
-  gap: 10px;
-  padding: 0 10px;
+  gap: 10px;                     /* espacio entre imágenes */
   transition: transform 0.5s ease-in-out;
 }
 
 /* Imágenes del carrusel */
 .slides img {
-  width: 200px;
-  height: 250px;
+  width: 200px;                   /* ancho fijo */
+  height: 250px;                  /* altura uniforme */
   object-fit: cover;
-  border-radius: 15px;
-  border: 2px solid #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  border-radius: 12px;            /* solo esquinas redondeadas */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
   flex-shrink: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -142,7 +143,6 @@ nav a:hover {
   transform: scale(1.08);
   box-shadow: 0 12px 25px rgba(0,0,0,0.6);
 }
-
 /* -------------------------
    Contacto
 ------------------------- */
@@ -189,17 +189,14 @@ footer {
 
   .slider {
     width: 180px;
-  }
-
-  .slides {
-    padding: 0 5px;
-    gap: 8px;
+    padding: 8px;
   }
 
   .slides img {
     width: 160px;
     height: 200px;
   }
+}
 
   .contenido-principal {
     flex-direction: row;
