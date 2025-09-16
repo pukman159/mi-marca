@@ -105,7 +105,7 @@ nav a:hover {
 .carruseles-container {
   display: flex;
   justify-content: center;
-  gap: 100px;       /* espacio entre carruseles en PC */
+  gap: 100px;        /* espacio entre carruseles en PC */
   flex-wrap: nowrap;
   max-width: 100%;
   overflow-x: auto;
@@ -113,29 +113,34 @@ nav a:hover {
 
 /* Slider individual */
 .slider {
-  width: 220px;             /* ancho del carrusel */
+  width: 200px;       /* ancho del carrusel */
   overflow: hidden;
   border-radius: 15px;
-  border: 2px solid #fff;   /* borde completo del carrusel */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
+/* Slides y transición */
 .slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
+/* Imágenes del carrusel */
 .slides img {
-  width: 100%;              /* ocupa todo el ancho del slider */
-  height: 250px;            /* altura uniforme */
-  object-fit: cover;        /* no se distorsiona */
+  width: 200px;        /* ancho fijo */
+  height: 250px;       /* altura uniforme */
+  object-fit: cover;   /* mantiene proporción sin distorsionar */
+  border-radius: 15px;
+  border: 2px solid #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
   flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .slides img:hover {
   transform: scale(1.08);
   box-shadow: 0 12px 25px rgba(0,0,0,0.6);
 }
+
 /* -------------------------
    Contacto
 ------------------------- */
@@ -177,22 +182,21 @@ footer {
   .carruseles-container {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 20px;  /* menos espacio entre carruseles en móvil */
   }
 
   .slider {
-    width: 180px;
-    padding: 8px;
+    width: 180px;       
   }
 
   .slides img {
-    width: 160px;
-    height: 200px;
+    width: 160px;       
+    height: 200px;       /* altura proporcional en móvil */
   }
-}
 
+  /* Mantener logo al lado del texto en móvil */
   .contenido-principal {
-    flex-direction: row;
+    flex-direction: row; /* siempre al lado */
     gap: 15px;
     align-items: center;
     text-align: left;
@@ -208,6 +212,7 @@ footer {
     text-align: left;
   }
 }
+
 
 
 
