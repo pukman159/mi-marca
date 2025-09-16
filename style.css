@@ -99,29 +99,30 @@ nav a:hover {
   text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
-/* -------------------------
-   Contenedor de carruseles
-------------------------- */
+/* Carruseles Container */
 .carruseles-container {
   display: flex;
   justify-content: center;
-  gap: 60px;       /* espacio entre carruseles */
-  flex-wrap: nowrap; /* siempre al lado en PC */
+  gap: 60px;        /* espacio entre carruseles */
+  flex-wrap: nowrap;
   max-width: 100%;
   overflow-x: auto;
 }
 
 /* Slider individual */
 .slider {
-  width: 220px;  /* ancho visible = 1 imagen */
+  width: 220px;
   overflow: hidden;
+  border-radius: 15px;
 }
 
+/* Slides y transición */
 .slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
+/* Imágenes con efecto hover */
 .slides img {
   width: 200px;
   height: auto;
@@ -129,8 +130,47 @@ nav a:hover {
   border: 2px solid #fff;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
   flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.slides img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+}
+
+/* Ajuste para móviles */
+@media (max-width: 1000px) {
+  .carruseles-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .slider {
+    width: 160px;
+  }
+
+  .slides img {
+    width: 150px;
+  }
+}
+3️⃣ JavaScript “premium” paso a paso
+html
+Copiar código
+<script>
+const sliders = document.querySelectorAll('.slider');
+
+sliders.forEach(slider => {
+  const slides = slider.querySelector('.slides');
+  const total = slides.children.length;
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % total;
+    slides.style.transform = `translateX(-${index * 220}px)`;
+  }, 2500); // cada 2.5 segundos, más elegante
+});
+</script>
 /* -------------------------
    Contacto
 ------------------------- */
