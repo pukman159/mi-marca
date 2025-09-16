@@ -105,7 +105,7 @@ nav a:hover {
 .carruseles-container {
   display: flex;
   justify-content: center;
-  gap: 100px;        /* espacio entre carruseles en PC */
+  gap: 60px;       /* espacio entre carruseles en PC */
   flex-wrap: nowrap;
   max-width: 100%;
   overflow-x: auto;
@@ -113,9 +113,11 @@ nav a:hover {
 
 /* Slider individual */
 .slider {
-  width: 200px;       /* ancho del carrusel */
+  width: 220px;                  /* ancho del carrusel */
   overflow: hidden;
   border-radius: 15px;
+  border: 2px solid #fff;        /* borde solo al carrusel */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
 /* Slides y transición */
@@ -126,13 +128,12 @@ nav a:hover {
 
 /* Imágenes del carrusel */
 .slides img {
-  width: 200px;        /* ancho fijo */
-  height: 250px;       /* altura uniforme */
-  object-fit: cover;   /* mantiene proporción sin distorsionar */
-  border-radius: 15px;
-  border: 2px solid #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  width: 220px;                   /* ancho igual al slider */
+  height: 250px;                  /* altura uniforme */
+  object-fit: cover;               /* que ocupe todo el slider sin distorsionar */
   flex-shrink: 0;
+  border-radius: 12px;            /* solo esquinas redondeadas */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -182,7 +183,7 @@ footer {
   .carruseles-container {
     flex-direction: column;
     align-items: center;
-    gap: 20px;  /* menos espacio entre carruseles en móvil */
+    gap: 20px;
   }
 
   .slider {
@@ -190,13 +191,12 @@ footer {
   }
 
   .slides img {
-    width: 160px;       
-    height: 200px;       /* altura proporcional en móvil */
+    width: 180px;
+    height: 200px;
   }
 
-  /* Mantener logo al lado del texto en móvil */
   .contenido-principal {
-    flex-direction: row; /* siempre al lado */
+    flex-direction: row;
     gap: 15px;
     align-items: center;
     text-align: left;
@@ -212,6 +212,7 @@ footer {
     text-align: left;
   }
 }
+
 
 
 
