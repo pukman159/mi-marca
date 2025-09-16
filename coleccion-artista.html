@@ -185,11 +185,12 @@
       spaceBetween: 0,
       loop: false,
       centeredSlides: true,
-      slidesPerGroup: 1, // 👉 avanza de 1 en 1
+      slidesPerGroup: 1, 
+      watchSlidesProgress: true, // 👈 fuerza que los bullets sean por slide
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
-        type: 'bullets', // 👉 un punto por producto
+        type: 'bullets',
       },
       breakpoints: {
         768: { 
@@ -224,6 +225,7 @@
   </script>
 </body>
 </html>
+
 
 
 
