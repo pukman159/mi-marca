@@ -103,7 +103,7 @@ nav a:hover {
 .carruseles-container {
   display: flex;
   justify-content: center;
-  gap: 100px;        /* más separación entre carruseles */
+  gap: 100px;        /* espacio entre carruseles en PC */
   flex-wrap: nowrap;
   max-width: 100%;
   overflow-x: auto;
@@ -124,7 +124,7 @@ nav a:hover {
 
 /* Imágenes con efecto hover */
 .slides img {
-  width: 240px;
+  width: 200px;
   height: auto;
   border-radius: 15px;
   border: 2px solid #fff;
@@ -179,26 +179,34 @@ footer {
   .carruseles-container {
     flex-direction: column;
     align-items: center;
-    gap: 15px;  /* un poco menos de espacio */
+    gap: 20px;  /* menos espacio entre carruseles en móvil */
   }
 
   .slider {
-    width: 200px;       /* mantiene tamaño similar al anterior */
+    width: 180px;       
   }
 
   .slides img {
-    width: 180px;       /* imágenes más grandes como antes */
+    width: 160px;       
     height: auto;
   }
 
+  /* Mantener logo al lado del texto en móvil */
   .contenido-principal {
-    flex-direction: column;
+    flex-direction: row; /* siempre al lado */
     gap: 15px;
-    text-align: center;
+    align-items: center;
+    text-align: left;
+  }
+
+  .imagen-principal {
+    width: 90px;
+    height: 90px;
   }
 
   .contenido-principal .texto {
-    text-align: center;
+    font-size: 0.9em;
+    text-align: left;
   }
 }
 
