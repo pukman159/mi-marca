@@ -75,20 +75,21 @@
   </footer>
 
   <!-- JavaScript: carruseles -->
-  <script>
-    const sliders = document.querySelectorAll('.slider');
+<script>
+const sliders = document.querySelectorAll('.slider');
 
-    sliders.forEach(slider => {
-      const slides = slider.querySelector('.slides');
-      const total = slides.children.length;
-      let index = 0;
+sliders.forEach(slider => {
+  const slides = slider.querySelector('.slides');
+  const total = slides.children.length;
+  let index = 0;
+  const slideWidth = 240; // debe coincidir con el ancho del slider
 
-      setInterval(() => {
-        index = (index + 1) % total;
-        slides.style.transform = `translateX(-${index * 220}px)`; // ancho de slider
-      }, 2000); // cambia cada 2 segundos
-    });
-  </script>
+  setInterval(() => {
+    index = (index + 1) % total;
+    slides.style.transform = `translateX(-${index * slideWidth}px)`;
+  }, 2500); // cada 2.5 segundos
+});
+</script>
 </body>
 </html>
 
