@@ -5,6 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Colección Artista - CD│Store</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <style>
+    /* Carrusel */
+    .swiper {
+      width: 90%;
+      max-width: 1100px;
+      margin: 40px auto;
+    }
+    .swiper-slide {
+      text-align: center;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    .swiper-slide img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .swiper-slide h3 {
+      margin: 10px 0 5px;
+    }
+    .swiper-slide p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .swiper-slide a {
+      display: inline-block;
+      padding: 8px 16px;
+      background: black;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .swiper-slide a:hover {
+      background: #333;
+    }
+  </style>
 </head>
 <body>
 
@@ -21,47 +67,55 @@
     <h1 style="text-align:center; margin-top:40px;">Colección Artista</h1>
     <p style="text-align:center; margin-bottom:30px;">Explora nuestros productos exclusivos</p>
 
-    <!-- Contenedor de boxes -->
-    <div class="boxes-container">
-      <!-- Box 1 -->
-      <div class="box">
-        <img src="producto1.jpg" alt="Producto 1">
-        <h3>Polera Tiago</h3>
-        <p>Polera 100% de Algodon / Oversize</p>
-        <a href="#">Ver más</a>
+    <!-- Carrusel -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <!-- Producto 1 -->
+        <div class="swiper-slide">
+          <img src="producto1.jpg" alt="Producto 1">
+          <h3>Polera Tiago</h3>
+          <p>Polera 100% de Algodón / Oversize</p>
+          <a href="#">Ver más</a>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="swiper-slide">
+          <img src="producto2.jpg" alt="Producto 2">
+          <h3>Nombre Producto 2</h3>
+          <p>Descripción breve del producto 2</p>
+          <a href="#">Ver más</a>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="swiper-slide">
+          <img src="producto3.jpg" alt="Producto 3">
+          <h3>Nombre Producto 3</h3>
+          <p>Descripción breve del producto 3</p>
+          <a href="#">Ver más</a>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="swiper-slide">
+          <img src="producto4.jpg" alt="Producto 4">
+          <h3>Nombre Producto 4</h3>
+          <p>Descripción breve del producto 4</p>
+          <a href="#">Ver más</a>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="swiper-slide">
+          <img src="producto5.jpg" alt="Producto 5">
+          <h3>Nombre Producto 5</h3>
+          <p>Descripción breve del producto 5</p>
+          <a href="#">Ver más</a>
+        </div>
       </div>
 
-      <!-- Box 2 -->
-      <div class="box">
-        <img src="producto2.jpg" alt="Producto 2">
-        <h3>Nombre Producto 2</h3>
-        <p>Descripción breve del producto 2</p>
-        <a href="#">Ver más</a>
-      </div>
-
-      <!-- Box 3 -->
-      <div class="box">
-        <img src="producto3.jpg" alt="Producto 3">
-        <h3>Nombre Producto 3</h3>
-        <p>Descripción breve del producto 3</p>
-        <a href="#">Ver más</a>
-      </div>
-
-      <!-- Box 4 -->
-      <div class="box">
-        <img src="producto4.jpg" alt="Producto 4">
-        <h3>Nombre Producto 4</h3>
-        <p>Descripción breve del producto 4</p>
-        <a href="#">Ver más</a>
-      </div>
-
-      <!-- Box 5 -->
-      <div class="box">
-        <img src="producto5.jpg" alt="Producto 5">
-        <h3>Nombre Producto 5</h3>
-        <p>Descripción breve del producto 5</p>
-        <a href="#">Ver más</a>
-      </div>
+      <!-- Botones de navegación -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- Paginación -->
+      <div class="swiper-pagination"></div>
     </div>
   </main>
 
@@ -70,6 +124,37 @@
     <p>Tu estilo, nuestra inspiración</p>
   </footer>
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 1,  // en móvil
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 3000, // 3 segundos por slide
+        disableOnInteraction: false, // sigue el autoplay aunque uses flechas
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2, // en tablet
+        },
+        1024: {
+          slidesPerView: 3, // en PC
+        }
+      }
+    });
+  </script>
 </body>
 </html>
+
 
