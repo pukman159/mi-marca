@@ -206,32 +206,31 @@ footer {
 }
 
 /* -------------------------
-   Carrusel horizontal automático
+   Carrusel horizontal fijo
 ------------------------- */
 .slider {
-  width: 200px;       /* ancho igual al de la imagen */
+  width: 220px;           /* ancho igual al de la imagen + margen */
   overflow: hidden;
-  margin: 0 auto;     /* centra en la sección */
+  margin: 0 auto;
 }
 
 .slides {
   display: flex;
-  width: calc(200px * 6 + 10px * 5); /* 6 imágenes + 5 espacios */
-  animation: slide 18s infinite;     /* duración total del ciclo */
+  width: calc((200px + 10px) * 6); /* 6 imágenes + margen */
+  animation: slide 18s infinite;
 }
 
 .slides img {
-  width: 200px;                           /* tamaño original */
+  width: 200px;
   height: auto;
-  border-radius: 15px;                    /* esquinas redondeadas */
-  border: 2px solid #fff;                 /* marco blanco */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);/* sombra */
+  border-radius: 15px;
+  border: 2px solid #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  margin-right: 10px;
   flex-shrink: 0;
-  margin-right: 10px;                     /* espacio entre imágenes */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Animación: mueve una imagen a la vez */
+/* Animación horizontal: pasa una imagen a la vez */
 @keyframes slide {
   0%, 16.66%        { transform: translateX(0); }
   33.33%, 49.99%    { transform: translateX(-210px); }
@@ -239,17 +238,18 @@ footer {
   100%              { transform: translateX(0); }
 }
 
-/* Ajuste para móvil */
+/* 🔹 Ajuste para móviles */
 @media (max-width: 600px) {
   .slider {
-    width: 150px;    /* más pequeño en móvil */
+    width: 160px;        /* un poco más pequeño en móvil */
   }
 
   .slides img {
-    width: 150px;
+    width: 150px;        /* tamaño proporcional */
     margin-right: 8px;
   }
 }
+
 
 
 
