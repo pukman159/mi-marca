@@ -6,7 +6,8 @@
   <title>CD│Store</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+  <body>
   <!-- Encabezado -->
   <header>
     <div class="contenido-principal">
@@ -59,6 +60,23 @@
     </div>
   </div>
 </section>
+
+  <script>
+    const sliders = document.querySelectorAll('.slider');
+
+    sliders.forEach(slider => {
+      const slides = slider.querySelector('.slides');
+      const total = slides.children.length;
+      let index = 0;
+
+      setInterval(() => {
+        index = (index + 1) % total;
+        slides.style.transform = `translateX(-${index * 220}px)`; // ancho de slider
+      }, 2000); // cambia cada 2 segundos
+    });
+  </script>
+</body>
+</html>
 
   <!-- Contacto -->
   <section id="contacto">
