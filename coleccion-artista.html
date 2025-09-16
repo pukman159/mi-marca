@@ -180,44 +180,45 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
-    // Carrusel principal (productos) -> SIN autoplay
-const swiperProductos = new Swiper('.swiper.productos', {
-  slidesPerView: 1,
-  spaceBetween: 0, // 👈 quita el espacio en móvil
-  loop: false,     // 👈 evita que se duplique y muestre medio slide
-  centeredSlides: true, // 👈 centra bien el slide en móvil
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  breakpoints: {
-    768: { 
-      slidesPerView: 2,
-      spaceBetween: 20,
-      centeredSlides: false,
-      loop: false
+  // Carrusel principal (productos) -> SIN autoplay
+  const swiperProductos = new Swiper('.swiper.productos', {
+    slidesPerView: 1,
+    spaceBetween: 0, 
+    loop: false,     
+    centeredSlides: false, // ❌ lo quitamos
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
     },
-    1024: { 
-      slidesPerView: 3,
-      spaceBetween: 20,
-      centeredSlides: false,
-      loop: false
+    breakpoints: {
+      768: { 
+        slidesPerView: 2,
+        spaceBetween: 20,
+        centeredSlides: false,
+        loop: false
+      },
+      1024: { 
+        slidesPerView: 3,
+        spaceBetween: 20,
+        centeredSlides: false,
+        loop: false
+      }
     }
-  }
-});
-    // Carruseles internos (galerías de productos)
-    document.querySelectorAll('.swiper.producto-galeria').forEach((galeria) => {
-      new Swiper(galeria, {
-        slidesPerView: 1,
-        loop: true,
-        nested: true, // importante para que no interfiera con el carrusel principal
-        navigation: {
-          nextEl: galeria.querySelector('.swiper-button-next'),
-          prevEl: galeria.querySelector('.swiper-button-prev'),
-        }
-      });
+  });
+
+  // Carruseles internos (galerías de productos)
+  document.querySelectorAll('.swiper.producto-galeria').forEach((galeria) => {
+    new Swiper(galeria, {
+      slidesPerView: 1,
+      loop: true,
+      nested: true, // importante para que no interfiera con el carrusel principal
+      navigation: {
+        nextEl: galeria.querySelector('.swiper-button-next'),
+        prevEl: galeria.querySelector('.swiper-button-prev'),
+      }
     });
-  </script>
+  });
+</script>
 </body>
 </html>
 
