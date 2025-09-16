@@ -181,20 +181,30 @@
 
   <script>
     // Carrusel principal (productos) -> SIN autoplay
-    const swiperProductos = new Swiper('.swiper.productos', {
-      slidesPerView: 1,
+const swiperProductos = new Swiper('.swiper.productos', {
+  slidesPerView: 1,
+  spaceBetween: 0, // 👈 quita el espacio en móvil
+  loop: false,     // 👈 evita que se duplique y muestre medio slide
+  centeredSlides: true, // 👈 centra bien el slide en móvil
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    768: { 
+      slidesPerView: 2,
       spaceBetween: 20,
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
-      }
-    });
-
+      centeredSlides: false,
+      loop: false
+    },
+    1024: { 
+      slidesPerView: 3,
+      spaceBetween: 20,
+      centeredSlides: false,
+      loop: false
+    }
+  }
+});
     // Carruseles internos (galerías de productos)
     document.querySelectorAll('.swiper.producto-galeria').forEach((galeria) => {
       new Swiper(galeria, {
