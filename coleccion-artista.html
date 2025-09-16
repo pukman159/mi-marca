@@ -190,9 +190,9 @@
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
+      type: 'bullets', // 👈 asegura que siempre use bullets
       dynamicBullets: false,
       renderBullet: function (index, className) {
-        // 🔥 Devuelve solo puntitos, uno por cada slide (5 en total)
         return '<span class="' + className + '"></span>';
       }
     },
