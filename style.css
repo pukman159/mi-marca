@@ -205,11 +205,18 @@ footer {
   border-top: 2px solid #fff;
 }
 
-/* Contenedor de carrusel */
+/* Contenedor de los 3 carruseles al lado */
+.carruseles-container {
+  display: flex;
+  justify-content: center; /* centra los 3 carruseles en la sección */
+  gap: 20px;               /* espacio entre carruseles */
+  flex-wrap: wrap;          /* se ajusta en móviles */
+}
+
+/* Carrusel individual */
 .slider {
-  width: 420px;        /* 2 imágenes de 200px + 10px gap */
+  width: 420px;          /* 2 imágenes de 200px + 10px gap */
   overflow: hidden;
-  margin: 20px auto;   /* centra y separa cada carrusel verticalmente */
 }
 
 .slides {
@@ -227,22 +234,28 @@ footer {
   flex-shrink: 0;
 }
 
-/* Animación horizontal: se mueve una imagen a la vez */
+/* Animación horizontal */
 @keyframes slide2 {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
 /* Ajuste para móviles */
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
+  .carruseles-container {
+    flex-direction: column; /* en móviles los carruseles bajan uno debajo del otro */
+    align-items: center;
+  }
+
   .slider {
-    width: 320px;      /* 2 imágenes visibles en móvil */
+    width: 320px;          /* 2 imágenes visibles en móvil */
   }
 
   .slides img {
     width: 150px;
   }
 }
+
 
 
 
