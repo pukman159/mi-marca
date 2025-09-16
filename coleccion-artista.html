@@ -10,35 +10,44 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
   <style>
-    /* Carrusel */
-    .swiper {
+    /* Carrusel general */
+    .swiper.productos {
       width: 90%;
       max-width: 1100px;
       margin: 40px auto;
     }
-    .swiper-slide {
-      text-align: center;
+
+    /* Cada producto */
+    .producto {
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       padding: 20px;
+      text-align: center;
     }
-    .swiper-slide img {
+
+    /* Mini carrusel dentro del producto */
+    .swiper.producto-galeria {
       width: 100%;
-      max-height: 250px;
-      object-fit: cover;
-      border-radius: 10px;
+      height: 250px;
       margin-bottom: 15px;
     }
-    .swiper-slide h3 {
+    .producto-galeria img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .producto h3 {
       margin: 10px 0 5px;
     }
-    .swiper-slide p {
+    .producto p {
       font-size: 14px;
       color: #555;
       margin-bottom: 10px;
     }
-    .swiper-slide a {
+    .producto a {
       display: inline-block;
       padding: 8px 16px;
       background: black;
@@ -47,7 +56,7 @@
       text-decoration: none;
       transition: 0.3s;
     }
-    .swiper-slide a:hover {
+    .producto a:hover {
       background: #333;
     }
   </style>
@@ -67,51 +76,60 @@
     <h1 style="text-align:center; margin-top:40px;">Colección Artista</h1>
     <p style="text-align:center; margin-bottom:30px;">Explora nuestros productos exclusivos</p>
 
-    <!-- Carrusel -->
-    <div class="swiper">
+    <!-- Carrusel principal de productos -->
+    <div class="swiper productos">
       <div class="swiper-wrapper">
+
         <!-- Producto 1 -->
-        <div class="swiper-slide">
-          <img src="producto1.jpg" alt="Producto 1">
+        <div class="swiper-slide producto">
+          <!-- Mini carrusel de imágenes -->
+          <div class="swiper producto-galeria">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="producto1a.jpg" alt="Producto 1 - Imagen 1"></div>
+              <div class="swiper-slide"><img src="producto1b.jpg" alt="Producto 1 - Imagen 2"></div>
+            </div>
+            <!-- Flechas internas -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
           <h3>Polera Tiago</h3>
           <p>Polera 100% de Algodón / Oversize</p>
           <a href="#">Ver más</a>
         </div>
 
         <!-- Producto 2 -->
-        <div class="swiper-slide">
-          <img src="producto2.jpg" alt="Producto 2">
+        <div class="swiper-slide producto">
+          <div class="swiper producto-galeria">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="producto2a.jpg" alt="Producto 2 - Imagen 1"></div>
+              <div class="swiper-slide"><img src="producto2b.jpg" alt="Producto 2 - Imagen 2"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
           <h3>Nombre Producto 2</h3>
           <p>Descripción breve del producto 2</p>
           <a href="#">Ver más</a>
         </div>
 
         <!-- Producto 3 -->
-        <div class="swiper-slide">
-          <img src="producto3.jpg" alt="Producto 3">
+        <div class="swiper-slide producto">
+          <div class="swiper producto-galeria">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="producto3a.jpg" alt="Producto 3 - Imagen 1"></div>
+              <div class="swiper-slide"><img src="producto3b.jpg" alt="Producto 3 - Imagen 2"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
           <h3>Nombre Producto 3</h3>
           <p>Descripción breve del producto 3</p>
           <a href="#">Ver más</a>
         </div>
 
-        <!-- Producto 4 -->
-        <div class="swiper-slide">
-          <img src="producto4.jpg" alt="Producto 4">
-          <h3>Nombre Producto 4</h3>
-          <p>Descripción breve del producto 4</p>
-          <a href="#">Ver más</a>
-        </div>
-
-        <!-- Producto 5 -->
-        <div class="swiper-slide">
-          <img src="producto5.jpg" alt="Producto 5">
-          <h3>Nombre Producto 5</h3>
-          <p>Descripción breve del producto 5</p>
-          <a href="#">Ver más</a>
-        </div>
       </div>
 
-      <!-- Botones de navegación -->
+      <!-- Flechas del carrusel general -->
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
       <!-- Paginación -->
@@ -128,30 +146,39 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
-    const swiper = new Swiper('.swiper', {
-      slidesPerView: 1,  // en móvil
+    // Carrusel principal (productos)
+    const swiperProductos = new Swiper('.swiper.productos', {
+      slidesPerView: 1,
       spaceBetween: 20,
       loop: true,
       autoplay: {
-        delay: 3000, // 3 segundos por slide
-        disableOnInteraction: false, // sigue el autoplay aunque uses flechas
+        delay: 4000,
+        disableOnInteraction: false,
       },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
       },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.productos .swiper-button-next',
+        prevEl: '.productos .swiper-button-prev',
       },
       breakpoints: {
-        768: {
-          slidesPerView: 2, // en tablet
-        },
-        1024: {
-          slidesPerView: 3, // en PC
-        }
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
       }
+    });
+
+    // Carruseles internos (galerías de productos)
+    document.querySelectorAll('.swiper.producto-galeria').forEach((galeria, index) => {
+      new Swiper(galeria, {
+        slidesPerView: 1,
+        loop: true,
+        navigation: {
+          nextEl: galeria.querySelector('.swiper-button-next'),
+          prevEl: galeria.querySelector('.swiper-button-prev'),
+        }
+      });
     });
   </script>
 </body>
