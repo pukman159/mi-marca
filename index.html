@@ -80,13 +80,15 @@ const sliders = document.querySelectorAll('.slider');
 
 sliders.forEach(slider => {
   const slides = slider.querySelector('.slides');
-  const total = slides.children.length;
+  const images = slides.children;
   let index = 0;
 
+  const slideWidth = slider.offsetWidth;  // ancho completo del slider
+
   setInterval(() => {
-    index = (index + 1) % total;
-    slides.style.transform = `translateX(-${index * 220}px)`; // ancho fijo del slider
-  }, 2500); // cambia cada 2.5 segundos
+    index = (index + 1) % images.length;
+    slides.style.transform = `translateX(-${index * slideWidth}px)`;
+  }, 2500);
 });
   </script>
 </body>
