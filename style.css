@@ -24,34 +24,22 @@ header {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  flex-wrap: nowrap;   /* Siempre al lado */
+  flex-wrap: nowrap;
 }
 
 .imagen-principal {
-  width: 150px;        /* Tamaño por defecto (PC) */
+  width: 150px;
   height: 150px;
   object-fit: cover;
-  border-radius: 50%;  /* círculo perfecto */
+  border-radius: 50%;
   border: 3px solid #fff;
-  flex-shrink: 0;      /* El logo nunca se deforma */
+  flex-shrink: 0;
 }
 
 .contenido-principal .texto {
-  flex: 1;             /* El texto ocupa el espacio restante */
-  min-width: 0;        /* Permite que se encoja en móviles */
+  flex: 1;
+  min-width: 0;
   text-align: left;
-}
-
-/* 🔹 Ajuste automático para pantallas pequeñas */
-@media (max-width: 600px) {
-  .imagen-principal {
-    width: 90px;       
-    height: 90px;
-  }
-
-  .contenido-principal {
-    gap: 15px;
-  }
 }
 
 /* -------------------------
@@ -63,7 +51,7 @@ nav {
   gap: 20px;
   background: #111;
   padding: 15px 0;
-  flex-wrap: wrap;        /* permite que los botones bajen si no caben */
+  flex-wrap: wrap;
   border-top: 2px solid #fff;
   border-bottom: 2px solid #fff;
 }
@@ -78,7 +66,7 @@ nav a {
   border-radius: 10px;
   background: transparent;
   transition: all 0.3s ease;
-  white-space: nowrap;    /* evita que el texto se corte */
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -88,23 +76,8 @@ nav a:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* 🔹 Ajustes menú en móvil */
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  nav a {
-    width: 80%;
-    text-align: center;
-    font-size: 16px;
-  }
-}
-
 /* -------------------------
-   Sección principal (hero)
+   Sección principal: Hero
 ------------------------- */
 .hero {
   background: linear-gradient(to right, #000, #222);
@@ -122,53 +95,40 @@ nav a:hover {
   margin-bottom: 25px;
   font-weight: 300;
   letter-spacing: 1px;
+  color: #fff;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
-/* Galería de modelos */
-.galeria-modelos {
+/* -------------------------
+   Contenedor de carruseles
+------------------------- */
+.carruseles-container {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
+  gap: 60px;       /* espacio entre carruseles */
+  flex-wrap: nowrap; /* siempre al lado en PC */
+  max-width: 100%;
+  overflow-x: auto;
 }
 
-.galeria-modelos img {
+/* Slider individual */
+.slider {
+  width: 220px;  /* ancho visible = 1 imagen */
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
   width: 200px;
   height: auto;
   border-radius: 15px;
   border: 2px solid #fff;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.galeria-modelos img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-}
-
-/* -------------------------
-   Secciones generales
-------------------------- */
-section {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-#coleccion,
-#nosotros,
-#contacto {
-  background: #fff;
-}
-
-.caja {
-  background: #fff;
-  border: 2px solid #000;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  padding: 30px 40px;
-  margin: 20px auto;
-  max-width: 800px;
+  flex-shrink: 0;
 }
 
 /* -------------------------
@@ -205,41 +165,14 @@ footer {
   border-top: 2px solid #fff;
 }
 
-/* Contenedor de los 3 carruseles */
-.carruseles-container {
-  display: flex;
-  justify-content: center;
-  gap: 60px;       /* espacio entre carruseles */
-  flex-wrap: nowrap; /* siempre al lado en PC */
-  max-width: 100%;
-  overflow-x: auto;
-}
-
-.slider {
-  width: 220px;  /* ancho visible = 1 imagen */
-  overflow: hidden;
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out; /* transición al cambiar imagen */
-}
-
-.slides img {
-  width: 200px;
-  height: auto;
-  border-radius: 15px;
-  border: 2px solid #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-  flex-shrink: 0;
-}
-
-/* Ajuste móvil */
+/* -------------------------
+   Ajustes para móviles
+------------------------- */
 @media (max-width: 1000px) {
   .carruseles-container {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 20px;  /* menos espacio entre carruseles en móvil */
   }
 
   .slider {
@@ -249,7 +182,18 @@ footer {
   .slides img {
     width: 150px;
   }
+
+  .contenido-principal {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .contenido-principal .texto {
+    text-align: center;
+  }
 }
+
 
 
 
