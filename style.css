@@ -256,6 +256,11 @@ footer {
   }
 }
 
+@media (min-width: 1300px) {  /* solo en pantallas grandes */
+  .carruseles-container {
+    flex-wrap: nowrap;  /* no permiten bajar */
+  }
+}
 
 
 
