@@ -24,7 +24,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  flex-wrap: nowrap; /* nunca se rompa al apilarse */
+  flex-wrap: nowrap;
 }
 
 .imagen-principal {
@@ -105,7 +105,7 @@ nav a:hover {
 .carruseles-container {
   display: flex;
   justify-content: center;
-  gap: 100px;        /* espacio entre carruseles en PC */
+  gap: 100px;
   flex-wrap: nowrap;
   max-width: 100%;
   overflow-x: auto;
@@ -113,7 +113,7 @@ nav a:hover {
 
 /* Slider individual */
 .slider {
-  width: 200px;       /* ancho del carrusel */
+  width: 200px;
   overflow: hidden;
   border-radius: 15px;
 }
@@ -121,18 +121,18 @@ nav a:hover {
 /* Slides y transición con espacio extra a los lados */
 .slides {
   display: flex;
-  gap: 10px;           /* espacio entre imágenes */
-  padding: 0 10px;     /* espacio extra a los lados */
+  gap: 10px;
+  padding: 0 10px;
   transition: transform 0.5s ease-in-out;
 }
 
 /* Imágenes del carrusel */
 .slides img {
-  width: 200px;        /* ancho fijo */
-  height: 250px;       /* altura fija para uniformidad */
-  object-fit: cover;   /* mantiene proporción sin distorsionar */
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
   border-radius: 15px;
-  border: 2px solid #fff;  /* borde completo visible */
+  border: 2px solid #fff;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
   flex-shrink: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -144,29 +144,81 @@ nav a:hover {
 }
 
 /* -------------------------
+   Contacto
+------------------------- */
+#contacto {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  min-height: 200px;
+  padding: 40px;
+}
+
+#contacto div {
+  max-width: 400px;
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+/* -------------------------
+   Pie de página
+------------------------- */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+  border-top: 2px solid #fff;
+}
+
+/* -------------------------
    Ajustes para móviles
 ------------------------- */
 @media (max-width: 1000px) {
   .carruseles-container {
     flex-direction: column;
     align-items: center;
-    gap: 20px;  /* menos espacio entre carruseles en móvil */
+    gap: 20px;
   }
 
   .slider {
-    width: 180px;       
+    width: 180px;
   }
 
   .slides {
-    padding: 0 5px;      /* reduce espacio extra en móvil */
+    padding: 0 5px;
     gap: 8px;
   }
 
   .slides img {
-    width: 160px;       
-    height: 200px;       /* altura proporcional en móvil */
+    width: 160px;
+    height: 200px;
+  }
+
+  .contenido-principal {
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    text-align: left;
+  }
+
+  .imagen-principal {
+    width: 90px;
+    height: 90px;
+  }
+
+  .contenido-principal .texto {
+    font-size: 0.9em;
+    text-align: left;
   }
 }
+
 
 
 
