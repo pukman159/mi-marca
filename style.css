@@ -205,24 +205,24 @@ footer {
   border-top: 2px solid #fff;
 }
 
-/* Contenedor de los 3 carruseles al lado */
+/* Contenedor de los 3 carruseles */
 .carruseles-container {
   display: flex;
-  justify-content: center; /* centra los 3 carruseles en la sección */
-  gap: 20px;               /* espacio entre carruseles */
-  flex-wrap: wrap;          /* se ajusta en móviles */
+  justify-content: center; /* centra los 3 carruseles */
+  gap: 20px;               /* espacio entre ellos */
+  flex-wrap: nowrap;        /* nunca bajan de línea en PC */
 }
 
-/* Carrusel individual */
+/* Slider individual */
 .slider {
-  width: 420px;          /* 2 imágenes de 200px + 10px gap */
+  width: 220px;          /* solo 1 imagen visible + gap */
   overflow: hidden;
 }
 
 .slides {
   display: flex;
   gap: 10px;
-  animation: slide2 12s linear infinite;
+  animation: slide1 12s linear infinite;
 }
 
 .slides img {
@@ -234,21 +234,21 @@ footer {
   flex-shrink: 0;
 }
 
-/* Animación horizontal */
-@keyframes slide2 {
+/* Animación: pasa una imagen a la vez */
+@keyframes slide1 {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-50%); } /* mueve la mitad del total de imágenes */
 }
 
 /* Ajuste para móviles */
 @media (max-width: 1000px) {
   .carruseles-container {
-    flex-direction: column; /* en móviles los carruseles bajan uno debajo del otro */
+    flex-direction: column; /* bajan uno debajo del otro */
     align-items: center;
   }
 
   .slider {
-    width: 320px;          /* 2 imágenes visibles en móvil */
+    width: 160px;  /* tamaño móvil */
   }
 
   .slides img {
@@ -256,11 +256,6 @@ footer {
   }
 }
 
-@media (min-width: 1300px) {  /* solo en pantallas grandes */
-  .carruseles-container {
-    flex-wrap: nowrap;  /* no permiten bajar */
-  }
-}
 
 
 
