@@ -19,300 +19,6 @@ header {
   text-align: center;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  background: #111;
-  padding: 15px 0;
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  width: 100%;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 8px 18px;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  background: transparent;
-  transition: all 0.3s ease;
-}
-
-nav a:hover {
-  background: #fff;
-  color: #000;
-  transform: translateY(-3px); /* levanta el botón */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-/* -------------------------
-   Sección principal (hero)
-------------------------- */
-.hero {
-  background: linear-gradient(to right, #000, #222);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 20px;
-  color: white;
-  text-align: center;
-}
-
-.subtitulo {
-  font-size: 2em;
-  margin-bottom: 25px;
-  font-weight: 300;
-  letter-spacing: 1px;
-  color: #fff;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-}
-
-/* Galería de modelos */
-.galeria-modelos {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-}
-
-.galeria-modelos img {
-  width: 200px;
-  height: auto;
-  border-radius: 15px;
-  border: 2px solid #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.galeria-modelos img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-}
-
-/* -------------------------
-   Secciones generales
-------------------------- */
-section {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-#coleccion,
-#nosotros,
-#contacto {
-  background: #fff;
-}
-
-.caja {
-  background: #fff;
-  border: 2px solid #000;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  padding: 30px 40px;
-  margin: 20px auto;
-  max-width: 800px;
-}
-
-/* -------------------------
-   Contacto
-------------------------- */
-#contacto {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  min-height: 200px;
-  padding: 40px;
-}
-
-#contacto div {
-  max-width: 400px;
-  background: #000;
-  color: #fff;
-  padding: 20px;
-  border: 2px solid #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-}
-
-/* -------------------------
-   Pie de página
-------------------------- */
-footer {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  letter-spacing: 0.5px;
-}
-
-/* -------------------------
-   Logo junto al texto (inicio)
-------------------------- */
-/* -------------------------
-   Estilos generales
-------------------------- */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f8f8f8;
-  color: #222;
-  line-height: 1.6;
-}
-
-/* -------------------------
-   Encabezado
-------------------------- */
-header {
-  background: #000;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-
-}
-
-/* -------------------------
-   Menú de navegación
-------------------------- */
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  background: #111;
-  padding: 15px 0;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 8px 18px;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  background: transparent;
-  transition: all 0.3s ease;
-}
-
-nav a:hover {
-  background: #fff;
-  color: #000;
-  transform: translateY(-3px); /* levanta el botón */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-/* -------------------------
-   Sección principal (hero)
-------------------------- */
-.hero {
-  background: linear-gradient(to right, #000, #222);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 20px;
-  color: white;
-  text-align: center;
-}
-
-.subtitulo {
-  font-size: 2em;
-  margin-bottom: 25px;
-  font-weight: 300;
-  letter-spacing: 1px;
-  color: #fff;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-}
-
-/* Galería de modelos */
-.galeria-modelos {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-}
-
-.galeria-modelos img {
-  width: 200px;
-  height: auto;
-  border-radius: 15px;
-  border: 2px solid #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.galeria-modelos img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-}
-
-/* -------------------------
-   Secciones generales
-------------------------- */
-section {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-#coleccion,
-#nosotros,
-#contacto {
-  background: #fff;
-}
-
-.caja {
-  background: #fff;
-  border: 2px solid #000;
-  border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-  padding: 30px 40px;
-  margin: 20px auto;
-  max-width: 800px;
-}
-
-/* -------------------------
-   Contacto
-------------------------- */
-#contacto {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  min-height: 200px;
-  padding: 40px;
-}
-
-#contacto div {
-  max-width: 400px;
-  background: #000;
-  color: #fff;
-  padding: 20px;
-  border: 2px solid #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-}
-
-/* -------------------------
-   Pie de página
-------------------------- */
-footer {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  letter-spacing: 0.5px;
-  border-top: 2px solid #fff;
-}
-
-/* -------------------------
-   Logo junto al texto (inicio)
-------------------------- */
 .contenido-principal {
   display: flex;
   justify-content: center;
@@ -325,7 +31,7 @@ footer {
   width: 150px;        /* Tamaño por defecto (PC) */
   height: 150px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 50%;  /* círculo perfecto */
   border: 3px solid #fff;
   flex-shrink: 0;      /* El logo nunca se deforma */
 }
@@ -339,24 +45,27 @@ footer {
 /* 🔹 Ajuste automático para pantallas pequeñas */
 @media (max-width: 600px) {
   .imagen-principal {
-    width: 90px;       /* Más chico en móvil */
+    width: 90px;       
     height: 90px;
   }
-  
+
   .contenido-principal {
-    gap: 15px;         /* Menos espacio entre logo y texto */
+    gap: 15px;
   }
 }
-/* --- Menú de navegación --- */
+
+/* -------------------------
+   Menú de navegación
+------------------------- */
 nav {
   display: flex;
   justify-content: center;
   gap: 20px;
   background: #111;
   padding: 15px 0;
-  flex-wrap: wrap;  /* permite que los botones bajen si no caben */
-border-top: 2px solid #fff;
-
+  flex-wrap: wrap;        /* permite que los botones bajen si no caben */
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 
 nav a {
@@ -369,23 +78,133 @@ nav a {
   border-radius: 10px;
   background: transparent;
   transition: all 0.3s ease;
-  white-space: nowrap; /* evita que el texto se corte */
+  white-space: nowrap;    /* evita que el texto se corte */
 }
 
-/* --- Ajustes para pantallas pequeñas --- */
+nav a:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* 🔹 Ajustes menú en móvil */
 @media (max-width: 600px) {
   nav {
-    flex-direction: column;   /* en columna en móvil */
+    flex-direction: column;
     align-items: center;
     gap: 10px;
   }
 
   nav a {
-    width: 80%;              /* botones más anchos y centrados */
+    width: 80%;
     text-align: center;
-    font-size: 16px;         /* texto un poquito más chico */
+    font-size: 16px;
   }
 }
+
+/* -------------------------
+   Sección principal (hero)
+------------------------- */
+.hero {
+  background: linear-gradient(to right, #000, #222);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+}
+
+.subtitulo {
+  font-size: 2em;
+  margin-bottom: 25px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+/* Galería de modelos */
+.galeria-modelos {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.galeria-modelos img {
+  width: 200px;
+  height: auto;
+  border-radius: 15px;
+  border: 2px solid #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-modelos img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* -------------------------
+   Secciones generales
+------------------------- */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#coleccion,
+#nosotros,
+#contacto {
+  background: #fff;
+}
+
+.caja {
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  padding: 30px 40px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* -------------------------
+   Contacto
+------------------------- */
+#contacto {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  min-height: 200px;
+  padding: 40px;
+}
+
+#contacto div {
+  max-width: 400px;
+  background: #000;
+  color: #fff;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+/* -------------------------
+   Pie de página
+------------------------- */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+  border-top: 2px solid #fff;
+}
+
 
 
 
