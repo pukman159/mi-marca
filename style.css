@@ -116,13 +116,15 @@ nav a:hover {
   width: 220px;                  /* ancho del carrusel */
   overflow: hidden;
   border-radius: 15px;
-  border: 2px solid #fff;        /* borde solo al carrusel */
+  border: 2px solid #fff;        /* borde externo */
+  padding: 0 10px;               /* espacio extra a los lados */
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
-/* Slides y transición */
+/* Slides */
 .slides {
   display: flex;
+  gap: 0;                        /* sin gap entre imágenes */
   transition: transform 0.5s ease-in-out;
 }
 
