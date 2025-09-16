@@ -118,18 +118,19 @@ nav a:hover {
   border-radius: 15px;
 }
 
-/* Slides y transición */
+/* Slides y transición con espacio extra a los lados */
 .slides {
   display: flex;
-  gap: 0;             /* sin espacio extra que corte el borde */
+  gap: 10px;           /* espacio entre imágenes */
+  padding: 0 10px;     /* espacio extra a los lados */
   transition: transform 0.5s ease-in-out;
 }
 
 /* Imágenes del carrusel */
 .slides img {
-  width: 200px;       /* ancho fijo */
-  height: 250px;      /* altura fija para uniformidad */
-  object-fit: cover;  /* mantiene proporción sin distorsionar */
+  width: 200px;        /* ancho fijo */
+  height: 250px;       /* altura fija para uniformidad */
+  object-fit: cover;   /* mantiene proporción sin distorsionar */
   border-radius: 15px;
   border: 2px solid #fff;  /* borde completo visible */
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
@@ -156,11 +157,17 @@ nav a:hover {
     width: 180px;       
   }
 
+  .slides {
+    padding: 0 5px;      /* reduce espacio extra en móvil */
+    gap: 8px;
+  }
+
   .slides img {
     width: 160px;       
-    height: 200px;     /* altura proporcional en móvil */
+    height: 200px;       /* altura proporcional en móvil */
   }
 }
+
 
 
 
