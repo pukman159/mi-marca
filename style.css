@@ -24,7 +24,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap; /* nunca se rompa al apilarse */
 }
 
 .imagen-principal {
