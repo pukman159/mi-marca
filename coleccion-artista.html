@@ -39,6 +39,12 @@
       border-radius: 10px;
     }
 
+    /* Flechas internas más pequeñas */
+    .galeria-next, .galeria-prev {
+      color: black;
+      --swiper-navigation-size: 20px;
+    }
+
     .producto h3 {
       margin: 10px 0 5px;
     }
@@ -82,15 +88,13 @@
 
         <!-- Producto 1 -->
         <div class="swiper-slide producto">
-          <!-- Mini carrusel de imágenes -->
           <div class="swiper producto-galeria">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="PoleraTiago2.jpeg" alt="Producto 1 - Imagen 1"></div>
-              <div class="swiper-slide"><img src="PoleraTiago1.jpeg" alt="Producto 1 - Imagen 2"></div>
+              <div class="swiper-slide"><img src="PoleraTiago1.jpg" alt="Producto 1 - Imagen 1"></div>
+              <div class="swiper-slide"><img src="PoleraTiago2.jpg" alt="Producto 1 - Imagen 2"></div>
             </div>
-            <!-- Flechas internas -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="galeria-next"></div>
+            <div class="galeria-prev"></div>
           </div>
           <h3>Polera Tiago</h3>
           <p>Polera 100% de Algodón / Oversize</p>
@@ -104,8 +108,8 @@
               <div class="swiper-slide"><img src="producto2a.jpg" alt="Producto 2 - Imagen 1"></div>
               <div class="swiper-slide"><img src="producto2b.jpg" alt="Producto 2 - Imagen 2"></div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="galeria-next"></div>
+            <div class="galeria-prev"></div>
           </div>
           <h3>Nombre Producto 2</h3>
           <p>Descripción breve del producto 2</p>
@@ -119,11 +123,41 @@
               <div class="swiper-slide"><img src="producto3a.jpg" alt="Producto 3 - Imagen 1"></div>
               <div class="swiper-slide"><img src="producto3b.jpg" alt="Producto 3 - Imagen 2"></div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="galeria-next"></div>
+            <div class="galeria-prev"></div>
           </div>
           <h3>Nombre Producto 3</h3>
           <p>Descripción breve del producto 3</p>
+          <a href="#">Ver más</a>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="swiper-slide producto">
+          <div class="swiper producto-galeria">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="producto4a.jpg" alt="Producto 4 - Imagen 1"></div>
+              <div class="swiper-slide"><img src="producto4b.jpg" alt="Producto 4 - Imagen 2"></div>
+            </div>
+            <div class="galeria-next"></div>
+            <div class="galeria-prev"></div>
+          </div>
+          <h3>Nombre Producto 4</h3>
+          <p>Descripción breve del producto 4</p>
+          <a href="#">Ver más</a>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="swiper-slide producto">
+          <div class="swiper producto-galeria">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="producto5a.jpg" alt="Producto 5 - Imagen 1"></div>
+              <div class="swiper-slide"><img src="producto5b.jpg" alt="Producto 5 - Imagen 2"></div>
+            </div>
+            <div class="galeria-next"></div>
+            <div class="galeria-prev"></div>
+          </div>
+          <h3>Nombre Producto 5</h3>
+          <p>Descripción breve del producto 5</p>
           <a href="#">Ver más</a>
         </div>
 
@@ -174,10 +208,10 @@
     new Swiper(galeria, {
       slidesPerView: 1,
       loop: true,
-      nested: true, // 🚀 clave para que no afecte al carrusel principal
+      nested: true, // 🔑 evita que el carrusel principal se mueva
       navigation: {
-        nextEl: galeria.querySelector('.swiper-button-next'),
-        prevEl: galeria.querySelector('.swiper-button-prev'),
+        nextEl: galeria.querySelector('.galeria-next'),
+        prevEl: galeria.querySelector('.galeria-prev'),
       }
     });
   });
