@@ -83,9 +83,11 @@ sliders.forEach(slider => {
   const images = slides.children;
   let index = 0;
 
+  const slideWidth = slider.offsetWidth; // ancho completo del slider
+
   setInterval(() => {
     index = (index + 1) % images.length;
-    slides.style.transform = `translateX(-${index * images[0].offsetWidth}px)`;
+    slides.style.transform = `translateX(-${index * slideWidth}px)`;
   }, 2500);
 });
   </script>
