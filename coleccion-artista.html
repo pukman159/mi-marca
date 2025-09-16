@@ -178,55 +178,56 @@
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <script>
-    // Carrusel principal (productos)
-    // Carrusel principal (productos)
-const swiperProductos = new Swiper('.swiper.productos', {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  loop: false,
-  centeredSlides: true,
-  slidesPerGroup: 1,
-  watchSlidesProgress: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    dynamicBullets: false, // 👈 asegura que se muestren todos
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '"></span>';
-    }
-  },
-  breakpoints: {
-    768: { 
-      slidesPerView: 2,
-      spaceBetween: 20,
-      centeredSlides: false,
-      loop: false,
-      slidesPerGroup: 1
+<script>
+  // Carrusel principal (productos)
+  const swiperProductos = new Swiper('.swiper.productos', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: false,
+    centeredSlides: true,
+    slidesPerGroup: 1, 
+    watchSlidesProgress: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      dynamicBullets: false,
+      renderBullet: function (index, className) {
+        // 🔥 Esto fuerza que se muestre un punto por cada slide (5 en tu caso)
+        return '<span class="' + className + '">' + (index + 1) + '</span>';
+      }
     },
-    1024: { 
-      slidesPerView: 3,
-      spaceBetween: 20,
-      centeredSlides: false,
-      loop: false,
-      slidesPerGroup: 1
+    breakpoints: {
+      768: { 
+        slidesPerView: 2,
+        spaceBetween: 20,
+        centeredSlides: false,
+        loop: false,
+        slidesPerGroup: 1
+      },
+      1024: { 
+        slidesPerView: 3,
+        spaceBetween: 20,
+        centeredSlides: false,
+        loop: false,
+        slidesPerGroup: 1
+      }
     }
-  }
-});
+  });
 
-    // Carruseles internos (galerías de productos)
-    document.querySelectorAll('.swiper.producto-galeria').forEach((galeria) => {
-      new Swiper(galeria, {
-        slidesPerView: 1,
-        loop: true,
-        nested: true, 
-        navigation: {
-          nextEl: galeria.querySelector('.swiper-button-next'),
-          prevEl: galeria.querySelector('.swiper-button-prev'),
-        }
-      });
+  // Carruseles internos (galerías de productos)
+  document.querySelectorAll('.swiper.producto-galeria').forEach((galeria) => {
+    new Swiper(galeria, {
+      slidesPerView: 1,
+      loop: true,
+      nested: true, 
+      navigation: {
+        nextEl: galeria.querySelector('.swiper-button-next'),
+        prevEl: galeria.querySelector('.swiper-button-prev'),
+      }
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
 
