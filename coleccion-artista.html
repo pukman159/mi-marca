@@ -43,8 +43,7 @@
     /* Flechas internas */
     .producto-galeria .swiper-button-next,
     .producto-galeria .swiper-button-prev {
-      color: black;
-      --swiper-navigation-size: 20px;
+      color: #000;
     }
 
     .producto h3 {
@@ -90,6 +89,7 @@
 
         <!-- Producto 1 -->
         <div class="swiper-slide producto">
+          <!-- Mini carrusel de imágenes -->
           <div class="swiper producto-galeria">
             <div class="swiper-wrapper">
               <div class="swiper-slide"><img src="PoleraTiago1.jpeg" alt="Producto 1 - Imagen 1"></div>
@@ -166,7 +166,7 @@
 
       </div>
 
-      <!-- Solo dejamos la paginación -->
+      <!-- Solo paginación (ya sin flechas globales) -->
       <div class="swiper-pagination"></div>
     </div>
   </main>
@@ -179,40 +179,37 @@
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<script>
-  // Carrusel principal (productos)
-  const swiperProductos = new Swiper('.swiper.productos', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 }
-    }
-  });
-
-  // Carruseles internos (galerías de productos)
-  document.querySelectorAll('.swiper.producto-galeria').forEach((galeria) => {
-    new Swiper(galeria, {
+  <script>
+    // Carrusel principal (productos) -> SIN autoplay
+    const swiperProductos = new Swiper('.swiper.productos', {
       slidesPerView: 1,
+      spaceBetween: 20,
       loop: true,
-      nested: true, // importante para que no interfiera con el carrusel principal
-      navigation: {
-        nextEl: galeria.querySelector('.swiper-button-next'),
-        prevEl: galeria.querySelector('.swiper-button-prev'),
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
       }
     });
-  });
-</script>
+
+    // Carruseles internos (galerías de productos)
+    document.querySelectorAll('.swiper.producto-galeria').forEach((galeria) => {
+      new Swiper(galeria, {
+        slidesPerView: 1,
+        loop: true,
+        nested: true, // importante para que no interfiera con el carrusel principal
+        navigation: {
+          nextEl: galeria.querySelector('.swiper-button-next'),
+          prevEl: galeria.querySelector('.swiper-button-prev'),
+        }
+      });
+    });
+  </script>
 </body>
 </html>
+
 
 
