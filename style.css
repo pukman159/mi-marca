@@ -208,9 +208,11 @@ footer {
 /* Contenedor de los 3 carruseles */
 .carruseles-container {
   display: flex;
-  justify-content: center; /* centra los 3 carruseles */
-  gap: 20px;               /* espacio entre ellos */
-  flex-wrap: nowrap;        /* nunca bajan de línea en PC */
+  justify-content: center; /* centra los carruseles */
+  gap: 60px;               /* espacio más amplio entre cada carrusel */
+  flex-wrap: nowrap;       /* nunca bajan de línea en PC */
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 /* Slider individual */
