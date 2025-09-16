@@ -103,7 +103,7 @@ nav a:hover {
 .carruseles-container {
   display: flex;
   justify-content: center;
-  gap: 60px;        /* espacio entre carruseles */
+  gap: 100px;        /* más separación entre carruseles */
   flex-wrap: nowrap;
   max-width: 100%;
   overflow-x: auto;
@@ -111,7 +111,7 @@ nav a:hover {
 
 /* Slider individual */
 .slider {
-  width: 220px;
+  width: 240px;  /* ancho del carrusel */
   overflow: hidden;
   border-radius: 15px;
 }
@@ -138,39 +138,6 @@ nav a:hover {
   box-shadow: 0 12px 25px rgba(0,0,0,0.6);
 }
 
-/* Ajuste para móviles */
-@media (max-width: 1000px) {
-  .carruseles-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .slider {
-    width: 160px;
-  }
-
-  .slides img {
-    width: 150px;
-  }
-}
-3️⃣ JavaScript “premium” paso a paso
-html
-Copiar código
-<script>
-const sliders = document.querySelectorAll('.slider');
-
-sliders.forEach(slider => {
-  const slides = slider.querySelector('.slides');
-  const total = slides.children.length;
-  let index = 0;
-
-  setInterval(() => {
-    index = (index + 1) % total;
-    slides.style.transform = `translateX(-${index * 220}px)`;
-  }, 2500); // cada 2.5 segundos, más elegante
-});
-</script>
 /* -------------------------
    Contacto
 ------------------------- */
@@ -233,6 +200,7 @@ footer {
     text-align: center;
   }
 }
+
 
 
 
