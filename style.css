@@ -206,49 +206,48 @@ footer {
 }
 
 /* -------------------------
-   Carrusel horizontal fijo
+   Carrusel profesional y suave
 ------------------------- */
 .slider {
-  width: 220px;           /* ancho igual al de la imagen + margen */
+  width: 220px;          /* ancho del contenedor */
   overflow: hidden;
   margin: 0 auto;
+  position: relative;
 }
 
 .slides {
   display: flex;
-  width: calc((200px + 10px) * 6); /* 6 imágenes + margen */
-  animation: slide 18s infinite;
+  gap: 10px;
+  animation: slideSmooth 12s linear infinite;
 }
 
 .slides img {
-  width: 200px;
+  width: 200px;                     /* tamaño original */
   height: auto;
-  border-radius: 15px;
-  border: 2px solid #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-  margin-right: 10px;
+  border-radius: 15px;              /* esquinas redondeadas */
+  border: 2px solid #fff;           /* borde blanco */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* sombra */
   flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Animación horizontal: pasa una imagen a la vez */
-@keyframes slide {
-  0%, 16.66%        { transform: translateX(0); }
-  33.33%, 49.99%    { transform: translateX(-210px); }
-  66.66%, 83.33%    { transform: translateX(-420px); }
-  100%              { transform: translateX(0); }
+/* Animación continua horizontal */
+@keyframes slideSmooth {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* se repite continuamente */
 }
 
-/* 🔹 Ajuste para móviles */
+/* Ajuste para móviles */
 @media (max-width: 600px) {
   .slider {
-    width: 160px;        /* un poco más pequeño en móvil */
+    width: 160px;
   }
 
   .slides img {
-    width: 150px;        /* tamaño proporcional */
-    margin-right: 8px;
+    width: 150px;
   }
 }
+
 
 
 
