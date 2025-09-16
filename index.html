@@ -6,13 +6,11 @@
   <title>CD│Store</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
-  <body>
+<body>
   <!-- Encabezado -->
   <header>
     <div class="contenido-principal">
       <img src="Logo.jpg" alt="Logo CD│Store" class="imagen-principal">
-
       <div class="texto">
         <h1>Bienvenido a CD│Store</h1>
         <p>Moda urbana para cada estilo</p>
@@ -27,56 +25,39 @@
     <a href="tiempo-limitado.html">Tiempo Limitado</a>
   </nav>
 
-  <!-- Sección principal -->
-<section class="hero">
-  <h2 class="subtitulo">Viste tu estilo 🔥</h2>
+  <!-- Sección principal: carruseles -->
+  <section class="hero">
+    <h2 class="subtitulo">Viste tu estilo 🔥</h2>
 
-  <div class="carruseles-container">
-    <!-- Carrusel 1 -->
-    <div class="slider">
-      <div class="slides">
-        <img src="Bruce1.jpg" alt="Modelo 1">
-        <img src="Bruce2.jpeg" alt="Modelo 2">
-        <img src="Bruce3.jpeg" alt="Modelo 3">
+    <div class="carruseles-container">
+      <!-- Carrusel 1 -->
+      <div class="slider">
+        <div class="slides">
+          <img src="Bruce1.jpg" alt="Modelo 1">
+          <img src="Bruce2.jpeg" alt="Modelo 2">
+          <img src="Bruce3.jpeg" alt="Modelo 3">
+        </div>
+      </div>
+
+      <!-- Carrusel 2 -->
+      <div class="slider">
+        <div class="slides">
+          <img src="Bruce4.jpeg" alt="Modelo 4">
+          <img src="Bruce5.jpeg" alt="Modelo 5">
+          <img src="Bruce6.jpeg" alt="Modelo 6">
+        </div>
+      </div>
+
+      <!-- Carrusel 3 -->
+      <div class="slider">
+        <div class="slides">
+          <img src="Bruce1.jpg" alt="Modelo 1">
+          <img src="Bruce2.jpeg" alt="Modelo 2">
+          <img src="Bruce3.jpeg" alt="Modelo 3">
+        </div>
       </div>
     </div>
-
-    <!-- Carrusel 2 -->
-    <div class="slider">
-      <div class="slides">
-        <img src="Bruce4.jpeg" alt="Modelo 4">
-        <img src="Bruce5.jpeg" alt="Modelo 5">
-        <img src="Bruce6.jpeg" alt="Modelo 6">
-      </div>
-    </div>
-
-    <!-- Carrusel 3 -->
-    <div class="slider">
-      <div class="slides">
-        <img src="Bruce1.jpg" alt="Modelo 1">
-        <img src="Bruce2.jpeg" alt="Modelo 2">
-        <img src="Bruce3.jpeg" alt="Modelo 3">
-      </div>
-    </div>
-  </div>
-</section>
-
-  <script>
-    const sliders = document.querySelectorAll('.slider');
-
-    sliders.forEach(slider => {
-      const slides = slider.querySelector('.slides');
-      const total = slides.children.length;
-      let index = 0;
-
-      setInterval(() => {
-        index = (index + 1) % total;
-        slides.style.transform = `translateX(-${index * 220}px)`; // ancho de slider
-      }, 2000); // cambia cada 2 segundos
-    });
-  </script>
-</body>
-</html>
+  </section>
 
   <!-- Contacto -->
   <section id="contacto">
@@ -92,6 +73,22 @@
   <footer>
     <p>Tu estilo, nuestra inspiración</p>
   </footer>
+
+  <!-- JavaScript: carruseles -->
+  <script>
+    const sliders = document.querySelectorAll('.slider');
+
+    sliders.forEach(slider => {
+      const slides = slider.querySelector('.slides');
+      const total = slides.children.length;
+      let index = 0;
+
+      setInterval(() => {
+        index = (index + 1) % total;
+        slides.style.transform = `translateX(-${index * 220}px)`; // ancho de slider
+      }, 2000); // cambia cada 2 segundos
+    });
+  </script>
 </body>
 </html>
 
