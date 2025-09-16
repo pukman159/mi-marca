@@ -208,23 +208,21 @@ footer {
 /* Contenedor de los 3 carruseles */
 .carruseles-container {
   display: flex;
-  justify-content: center; /* centra los carruseles */
-  gap: 60px;               /* espacio más amplio entre cada carrusel */
-  flex-wrap: nowrap;       /* nunca bajan de línea en PC */
+  justify-content: center;
+  gap: 60px;       /* espacio entre carruseles */
+  flex-wrap: nowrap; /* siempre al lado en PC */
   max-width: 100%;
   overflow-x: auto;
 }
 
-/* Slider individual */
 .slider {
-  width: 220px;          /* solo 1 imagen visible + gap */
+  width: 220px;  /* ancho visible = 1 imagen */
   overflow: hidden;
 }
 
 .slides {
   display: flex;
-  gap: 10px;
-  animation: slide1 12s linear infinite;
+  transition: transform 0.5s ease-in-out; /* transición al cambiar imagen */
 }
 
 .slides img {
@@ -236,21 +234,16 @@ footer {
   flex-shrink: 0;
 }
 
-/* Animación: pasa una imagen a la vez */
-@keyframes slide1 {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* mueve la mitad del total de imágenes */
-}
-
-/* Ajuste para móviles */
+/* Ajuste móvil */
 @media (max-width: 1000px) {
   .carruseles-container {
-    flex-direction: column; /* bajan uno debajo del otro */
+    flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
   .slider {
-    width: 160px;  /* tamaño móvil */
+    width: 160px;
   }
 
   .slides img {
