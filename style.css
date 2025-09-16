@@ -179,15 +179,16 @@ footer {
   .carruseles-container {
     flex-direction: column;
     align-items: center;
-    gap: 20px;  /* menos espacio entre carruseles en móvil */
+    gap: 15px;  /* un poco menos de espacio */
   }
 
   .slider {
-    width: 160px;
+    width: 200px;       /* mantiene tamaño similar al anterior */
   }
 
   .slides img {
-    width: 150px;
+    width: 180px;       /* imágenes más grandes como antes */
+    height: auto;
   }
 
   .contenido-principal {
@@ -200,6 +201,7 @@ footer {
     text-align: center;
   }
 }
+
 
 
 
