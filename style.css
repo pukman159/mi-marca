@@ -205,48 +205,45 @@ footer {
   border-top: 2px solid #fff;
 }
 
-/* -------------------------
-   Carrusel profesional y suave
-------------------------- */
+/* Contenedor de carrusel */
 .slider {
-  width: 220px;          /* ancho del contenedor */
+  width: 420px;        /* 2 imágenes de 200px + 10px de gap */
   overflow: hidden;
-  margin: 0 auto;
-  position: relative;
+  margin: 20px auto;   /* separa los carruseles */
 }
 
 .slides {
   display: flex;
   gap: 10px;
-  animation: slideSmooth 20s linear infinite;
+  animation: slide2 12s linear infinite;
 }
 
 .slides img {
-  width: 200px;                     /* tamaño original */
+  width: 200px;
   height: auto;
-  border-radius: 15px;              /* esquinas redondeadas */
-  border: 2px solid #fff;           /* borde blanco */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* sombra */
+  border-radius: 15px;
+  border: 2px solid #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
   flex-shrink: 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Animación continua horizontal */
-@keyframes slideSmooth {
+/* Animación horizontal */
+@keyframes slide2 {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* se repite continuamente */
+  100% { transform: translateX(-50%); } /* mueve la primera mitad de imágenes */
 }
 
 /* Ajuste para móviles */
 @media (max-width: 600px) {
   .slider {
-    width: 160px;
+    width: 320px;   /* 2 imágenes más pequeñas en móvil */
   }
 
   .slides img {
     width: 150px;
   }
 }
+
 
 
 
