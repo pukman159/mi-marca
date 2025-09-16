@@ -113,10 +113,10 @@ nav a:hover {
 
 /* Slider individual */
 .slider {
-  width: 220px;           /* ancho del carrusel */
+  width: 220px;             /* ancho del carrusel */
   overflow: hidden;
   border-radius: 15px;
-  border: 2px solid #fff;
+  border: 2px solid #fff;   /* borde completo del carrusel */
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
@@ -126,11 +126,9 @@ nav a:hover {
 }
 
 .slides img {
-  width: 100%;             /* imagen ocupa todo el slider */
-  height: 250px;
-  object-fit: cover;       /* mantiene proporción sin deformar */
-  border-radius: 12px;
-  border: 2px solid #fff;
+  width: 100%;              /* ocupa todo el ancho del slider */
+  height: 250px;            /* altura uniforme */
+  object-fit: cover;        /* no se distorsiona */
   flex-shrink: 0;
 }
 
