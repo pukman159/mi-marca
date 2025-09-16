@@ -119,13 +119,15 @@ nav a:hover {
 /* Slides y transición */
 .slides {
   display: flex;
+  gap: 0; /* así no queda espacio que corte el borde */
   transition: transform 0.5s ease-in-out;
 }
 
 /* Imágenes con efecto hover */
 .slides img {
   width: 200px;
-  height: auto;
+  height: 250px; /* altura fija para que todos los carruseles sean iguales */
+  object-fit: cover;
   border-radius: 15px;
   border: 2px solid #fff;
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
