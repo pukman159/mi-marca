@@ -27,37 +27,37 @@
 
   <!-- Sección principal: carruseles -->
   <section class="hero">
-  <h2 class="subtitulo">Viste tu estilo 🔥</h2>
+    <h2 class="subtitulo">Viste tu estilo 🔥</h2>
 
-  <div class="carruseles-container">
-    <!-- Carrusel 1 -->
-    <div class="slider">
-      <div class="slides">
-        <img src="Bruce1.jpg" alt="Modelo 1">
-        <img src="Bruce2.jpeg" alt="Modelo 2">
-        <img src="Bruce3.jpeg" alt="Modelo 3">
+    <div class="carruseles-container">
+      <!-- Carrusel 1 -->
+      <div class="slider">
+        <div class="slides">
+          <img src="Bruce1.jpg" alt="Modelo 1">
+          <img src="Bruce2.jpeg" alt="Modelo 2">
+          <img src="Bruce3.jpeg" alt="Modelo 3">
+        </div>
+      </div>
+
+      <!-- Carrusel 2 -->
+      <div class="slider">
+        <div class="slides">
+          <img src="Bruce4.jpeg" alt="Modelo 4">
+          <img src="Bruce5.jpeg" alt="Modelo 5">
+          <img src="Bruce6.jpeg" alt="Modelo 6">
+        </div>
+      </div>
+
+      <!-- Carrusel 3 -->
+      <div class="slider">
+        <div class="slides">
+          <img src="Bruce1.jpg" alt="Modelo 1">
+          <img src="Bruce2.jpeg" alt="Modelo 2">
+          <img src="Bruce3.jpeg" alt="Modelo 3">
+        </div>
       </div>
     </div>
-
-    <!-- Carrusel 2 -->
-    <div class="slider">
-      <div class="slides">
-        <img src="Bruce4.jpeg" alt="Modelo 4">
-        <img src="Bruce5.jpeg" alt="Modelo 5">
-        <img src="Bruce6.jpeg" alt="Modelo 6">
-      </div>
-    </div>
-
-    <!-- Carrusel 3 -->
-    <div class="slider">
-      <div class="slides">
-        <img src="Bruce1.jpg" alt="Modelo 1">
-        <img src="Bruce2.jpeg" alt="Modelo 2">
-        <img src="Bruce3.jpeg" alt="Modelo 3">
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Contacto -->
   <section id="contacto">
@@ -75,23 +75,22 @@
   </footer>
 
   <!-- JavaScript: carruseles -->
-<script>
-const sliders = document.querySelectorAll('.slider');
+  <script>
+    const sliders = document.querySelectorAll('.slider');
 
-sliders.forEach(slider => {
-  const slides = slider.querySelector('.slides');
-  const images = slides.children;
-  let index = 0;
+    sliders.forEach(slider => {
+      const slides = slider.querySelector('.slides');
+      const images = slides.children;
+      let index = 0;
 
-  // ancho real de cada imagen incluyendo margen si hubiera
-  const slideWidth = images[0].offsetWidth;
+      const slideWidth = images[0].offsetWidth + 10; // ancho + gap
 
-  setInterval(() => {
-    index = (index + 1) % images.length;
-    slides.style.transform = `translateX(-${index * slideWidth}px)`;
-  }, 2500); // cada 2.5 segundos
-});
-</script>
+      setInterval(() => {
+        index = (index + 1) % images.length;
+        slides.style.transform = `translateX(-${index * slideWidth}px)`;
+      }, 2500);
+    });
+  </script>
 </body>
 </html>
 
