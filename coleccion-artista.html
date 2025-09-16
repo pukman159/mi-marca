@@ -31,6 +31,7 @@
       width: 100%;
       height: 250px;
       margin-bottom: 15px;
+      position: relative;
     }
     .producto-galeria img {
       width: 100%;
@@ -40,7 +41,8 @@
     }
 
     /* Flechas internas */
-    .galeria-next, .galeria-prev {
+    .producto-galeria .swiper-button-next,
+    .producto-galeria .swiper-button-prev {
       color: black;
       --swiper-navigation-size: 20px;
     }
@@ -90,11 +92,12 @@
         <div class="swiper-slide producto">
           <div class="swiper producto-galeria">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="producto1a.jpg" alt="Producto 1 - Imagen 1"></div>
-              <div class="swiper-slide"><img src="producto1b.jpg" alt="Producto 1 - Imagen 2"></div>
+              <div class="swiper-slide"><img src="TiagoPolera1.jpeg" alt="Producto 1 - Imagen 1"></div>
+              <div class="swiper-slide"><img src="TiagoPolera2.jpeg" alt="Producto 1 - Imagen 2"></div>
             </div>
-            <div class="galeria-next"></div>
-            <div class="galeria-prev"></div>
+            <!-- Flechas internas -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
           <h3>Polera Tiago</h3>
           <p>Polera 100% de Algodón / Oversize</p>
@@ -108,8 +111,8 @@
               <div class="swiper-slide"><img src="producto2a.jpg" alt="Producto 2 - Imagen 1"></div>
               <div class="swiper-slide"><img src="producto2b.jpg" alt="Producto 2 - Imagen 2"></div>
             </div>
-            <div class="galeria-next"></div>
-            <div class="galeria-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
           <h3>Nombre Producto 2</h3>
           <p>Descripción breve del producto 2</p>
@@ -123,8 +126,8 @@
               <div class="swiper-slide"><img src="producto3a.jpg" alt="Producto 3 - Imagen 1"></div>
               <div class="swiper-slide"><img src="producto3b.jpg" alt="Producto 3 - Imagen 2"></div>
             </div>
-            <div class="galeria-next"></div>
-            <div class="galeria-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
           <h3>Nombre Producto 3</h3>
           <p>Descripción breve del producto 3</p>
@@ -138,8 +141,8 @@
               <div class="swiper-slide"><img src="producto4a.jpg" alt="Producto 4 - Imagen 1"></div>
               <div class="swiper-slide"><img src="producto4b.jpg" alt="Producto 4 - Imagen 2"></div>
             </div>
-            <div class="galeria-next"></div>
-            <div class="galeria-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
           <h3>Nombre Producto 4</h3>
           <p>Descripción breve del producto 4</p>
@@ -153,8 +156,8 @@
               <div class="swiper-slide"><img src="producto5a.jpg" alt="Producto 5 - Imagen 1"></div>
               <div class="swiper-slide"><img src="producto5b.jpg" alt="Producto 5 - Imagen 2"></div>
             </div>
-            <div class="galeria-next"></div>
-            <div class="galeria-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
           <h3>Nombre Producto 5</h3>
           <p>Descripción breve del producto 5</p>
@@ -201,16 +204,15 @@
     new Swiper(galeria, {
       slidesPerView: 1,
       loop: true,
-      nested: true,
+      nested: true, // importante para que no interfiera con el carrusel principal
       navigation: {
-        nextEl: galeria.querySelector('.galeria-next'),
-        prevEl: galeria.querySelector('.galeria-prev'),
+        nextEl: galeria.querySelector('.swiper-button-next'),
+        prevEl: galeria.querySelector('.swiper-button-prev'),
       }
     });
   });
 </script>
 </body>
 </html>
-
 
 
