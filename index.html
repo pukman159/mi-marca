@@ -83,7 +83,8 @@ sliders.forEach(slider => {
   const images = slides.children;
   let index = 0;
 
-  const slideWidth = slider.offsetWidth;  // ancho completo del slider
+  // ancho de cada imagen incluyendo padding del slider
+  const slideWidth = slider.offsetWidth - 20; // 10px a cada lado
 
   setInterval(() => {
     index = (index + 1) % images.length;
