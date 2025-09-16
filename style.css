@@ -124,18 +124,18 @@ nav a:hover {
 /* Slides y transición */
 .slides {
   display: flex;
-  gap: 10px;                     /* espacio entre imágenes */
+  gap: 0;                     /* elimina cualquier gap que cause que se vea la siguiente imagen */
   transition: transform 0.5s ease-in-out;
 }
 
 /* Imágenes del carrusel */
 .slides img {
-  width: 200px;                   /* ancho fijo */
-  height: 250px;                  /* altura uniforme */
-  object-fit: cover;
-  border-radius: 12px;            /* solo esquinas redondeadas */
+  width: 100%;                /* la imagen ocupa todo el ancho disponible dentro del slider */
+  height: auto;               /* mantiene proporción */
+  border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.3);
   flex-shrink: 0;
+  object-fit: cover;          /* evita distorsión */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
