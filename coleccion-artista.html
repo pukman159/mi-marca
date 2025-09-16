@@ -145,42 +145,43 @@
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <script>
-    // Carrusel principal (productos)
-    const swiperProductos = new Swiper('.swiper.productos', {
+<script>
+  // Carrusel principal (productos)
+  const swiperProductos = new Swiper('.swiper.productos', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.productos .swiper-button-next',
+      prevEl: '.productos .swiper-button-prev',
+    },
+    breakpoints: {
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+
+  // Carruseles internos (galerías de productos)
+  document.querySelectorAll('.swiper.producto-galeria').forEach((galeria) => {
+    new Swiper(galeria, {
       slidesPerView: 1,
-      spaceBetween: 20,
       loop: true,
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
+      nested: true, // 🚀 clave para que no afecte al carrusel principal
       navigation: {
-        nextEl: '.productos .swiper-button-next',
-        prevEl: '.productos .swiper-button-prev',
-      },
-      breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
+        nextEl: galeria.querySelector('.swiper-button-next'),
+        prevEl: galeria.querySelector('.swiper-button-prev'),
       }
     });
-
-    // Carruseles internos (galerías de productos)
-    document.querySelectorAll('.swiper.producto-galeria').forEach((galeria, index) => {
-      new Swiper(galeria, {
-        slidesPerView: 1,
-        loop: true,
-        navigation: {
-          nextEl: galeria.querySelector('.swiper-button-next'),
-          prevEl: galeria.querySelector('.swiper-button-prev'),
-        }
-      });
-    });
-  </script>
+  });
+</script>
 </body>
 </html>
 
